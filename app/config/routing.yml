@@ -1,0 +1,4 @@
+cmm_site:
+    resource: "@CmmSiteBundle/Resources/config/routing.yml"
+    prefix:   /
+

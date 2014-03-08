@@ -1,0 +1,7 @@
+parameters:
+#    cmm_site.example.class: Cmm\SiteBundle\Example
+
+services:
+#    cmm_site.example:
+#        class: %cmm_site.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

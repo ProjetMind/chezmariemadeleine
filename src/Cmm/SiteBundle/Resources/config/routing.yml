@@ -1,0 +1,3 @@
+cmm_site_homepage:
+    pattern:  /hello/{name}
+    defaults: { _controller: CmmSiteBundle:Default:index }
