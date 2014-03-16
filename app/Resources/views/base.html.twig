@@ -11,7 +11,7 @@
             </title>
         {% endblock %}
             
-            <link rel="shortcut icon" href="{{ asset('favicon.ico')}}" type="image/x-icon">/    
+            <link rel="shortcut icon" href="{{ asset('favicon.ico')}}" type="image/x-icon" />    
             
         {# CSS Resources #}    
         {% stylesheets 
@@ -42,22 +42,70 @@
     
     <body>  
         
-        <div class="container-fluid">
+        <div class="container-fluid row-fluid">
     
+            <span class="span8 offset2">
+                
         {# BLOCK HEADER #}
         {% block header %}
-        
+                <span id="header" class="row-fluid">
+                    
+                </span>
         {% endblock header %}
         
         {# BLOCK BODY #}
         {% block body %}
         
+                {### NAVIGATION ###}
+                {% block block_navigation %}
+                <span class="row-fluid">
+                    {% block nav %}
+                
+                    {% endblock nav %}
+                </span>
+                {% endblock block_navigation %}
+                {### FIN NAVIGATION ###}
+                
+                {### TITRE DE LA PAGE ###}
+                {% block block_title %}
+                <span class="row-fluid">
+                    <span class="span12">
+                        <h3 id="titlePage">
+                            {% block title_page %}
+
+                            {% endblock title_page %}
+                        </h3>
+                    </span>
+                </span>
+                {% endblock block_title %}
+                {### FIN TITRE DE LA PAGE ###}
+                
+                {### DESCRIPTION DE LA PAGE ###}
+                {% block block_description %}
+                <p id="descriptionPage" class="">
+                {% block description_page %}
+                
+                {% endblock description_page %}
+                </p>
+                {% endblock block_description %}
+                {### FIN DESCRIPTION DE LA PAGE ###}
+                
+                {### CONTENU DE LA PAGE ###}
+                {% block block_contenu %}
+                    {% block contenu_page %}
+                
+                    {% endblock contenu_page %}
+                {% endblock block_contenu %}
+                {### FIN CONTENU DE LA PAGE ###}
+                
         {% endblock body %}
         
         {# BLOCK MENU DROIT #}
-        {% block menu_droit %}
+        {% block block_menu_droit %}
         
-        {% endblock menu_droit %}
+        {% endblock block_menu_droit %}
+                
+            </span>
             
         </div>
         
