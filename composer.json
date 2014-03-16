@@ -19,14 +19,10 @@
         "sensio/framework-extra-bundle": "~3.0",
         "sensio/generator-bundle": "~2.3",
         "incenteev/composer-parameter-handler": "~2.0",
-        "braincrafted/bootstrap-bundle": "~2.0@alpha",
-        "twbs/bootstrap": "3.0.*",
         "jquery/jquery":  "1.10.*",
-        "knplabs/knp-menu": "2.0.*@dev",
-        "knplabs/knp-menu-bundle":"dev-master",
-        "knplabs/knp-paginator-bundle": "dev-master",
         "friendsofsymfony/user-bundle": "~2.0@dev",
-        "friendsofsymfony/jsrouting-bundle": "@stable"
+        "friendsofsymfony/jsrouting-bundle": "@stable",
+        "leafo/lessphp": "0.4.0"
     },
     "scripts": {
         "post-install-cmd": [
@@ -34,16 +30,14 @@
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
-            "Braincrafted\\Bundle\\BootstrapBundle\\Composer\\ScriptHandler::install"
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile"
         ],
         "post-update-cmd": [
             "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
-            "Braincrafted\\Bundle\\BootstrapBundle\\Composer\\ScriptHandler::install"
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile"
         ]
     },
     "config": {

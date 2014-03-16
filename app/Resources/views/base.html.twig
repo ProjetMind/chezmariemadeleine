@@ -10,10 +10,39 @@
                     {% block title %}Chez Marie Madeleine {% endblock %}
             </title>
         {% endblock %}
+            
+            <link rel="shortcut icon" href="favicon.ico"></link>    
+            
+        {# CSS Resources #}    
+        {% stylesheets 
+                filter='?lessphp, ?yui_css, cssrewrite'
+                "../web/css/bootstrap.less"
+                "../src/Cmm/SiteBundle/Resources/public/css/*.css"
+                "../src/Cmm/UserBundle/Resources/public/css/*.css"
+                output='css/style.css'
+        %}    
+                <link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
+         {% endstylesheets %}    
+                
+         {# Javascript Resources #}       
+         {% javascripts 
+                filter='?yui_js'
+                "../vendor/jquery/jquery/jquery-1.10.2.js"
+                "../web/js/bootstrap.min.js"
+                "bundles/fosjsrouting/js/router.js"
+                "js/fos_js_routes.js"
+                "../src/Cmm/SiteBundle/Resources/public/js/*.js"
+                "../src/Cmm/UserBundle/Resources/public/js/*.js"
+                output='js/script_js.js'
+            %}
+                <script type="text/javascript" src="{{ asset_url }}"></script>   
+            {% endjavascripts %}       
                 
     </head>
     
     <body>  
+        
+        <div class="container-fluid">
     
         {# BLOCK HEADER #}
         {% block header %}
@@ -29,6 +58,9 @@
         {% block menu_droit %}
         
         {% endblock menu_droit %}
+            
+        </div>
+        
     </body>
        
 </html>
