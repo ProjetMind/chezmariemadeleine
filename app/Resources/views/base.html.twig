@@ -5,7 +5,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         
-        {% block blockTitle %}        
+        {% block block_title_header %}        
             <title>
                     {% block title %}Chez Marie Madeleine {% endblock %}
             </title>
@@ -28,7 +28,7 @@
          {% javascripts 
                 filter='?yui_js'
                 "../vendor/jquery/jquery/jquery-1.10.2.js"
-                "../web/js/bootstrap.min.js"
+                "../web/js/bootstrap.js"
                 "bundles/fosjsrouting/js/router.js"
                 "js/fos_js_routes.js"
                 "../src/Cmm/SiteBundle/Resources/public/js/*.js"
@@ -49,6 +49,9 @@
         {# BLOCK HEADER #}
         {% block header %}
                 <span id="header" class="row-fluid">
+                    <div>
+                        <a id="nomSite" href="{{ path('cmm_site_homepage') }}" title="Accueil - Chez Marie Madeleine">Chez Marie Madelaine</a>
+                    </div>
                     
                 </span>
         {% endblock header %}
