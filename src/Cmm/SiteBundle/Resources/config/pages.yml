@@ -1,0 +1,52 @@
+cmm_site_page_creperie:
+    pattern:  /la-creperie
+    defaults: { _controller: CmmSiteBundle:Site:pages }
+
+cmm_site_page_presentation:
+    pattern:  /présentation
+    defaults: { _controller: CmmSiteBundle:Site:pages }
+    prefix: /la-creperie
+
+cmm_site_page_quartier:
+    pattern:  /le-quartier
+    defaults: { _controller: CmmSiteBundle:Site:pages }
+    prefix: /la-creperie
+        
+cmm_site_page_en_ce_moment:
+    pattern:  /en-ce-moment
+    defaults: { _controller: CmmSiteBundle:Site:pages }
+    prefix: /la-creperie
+    
+    
+    
+cmm_site_page_produits:
+    pattern:  /nos-produits
+    defaults: { _controller: CmmSiteBundle:Site:pages }
+
+
+
+cmm_site_page_carte:
+    pattern:  /la-carte
+    defaults: { _controller: CmmSiteBundle:Site:pages }
+    
+cmm_site_page_crepe_galette:
+    pattern:  /crepes-et-galettes
+    defaults: { _controller: CmmSiteBundle:Site:pages }
+    prefix: /la-carte
+    
+cmm_site_page_formules:
+    pattern:  /formules
+    defaults: { _controller: CmmSiteBundle:Site:pages }
+    prefix: la-carte
+
+    
+cmm_site_page_acces:
+    pattern:  /acces
+    defaults: { _controller: CmmSiteBundle:Site:pages }
+
+    
+cmm_site_page_contact:
+    pattern:  /contact
+    defaults: { _controller: CmmSiteBundle:Site:pages }
+    
+    

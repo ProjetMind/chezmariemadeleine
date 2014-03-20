@@ -16,7 +16,7 @@
         {# CSS Resources #}    
         {% stylesheets 
                 filter='?lessphp, ?yui_css, cssrewrite'
-                "../web/css/bootstrap.less"
+                "../web/css/bootstrap.css"
                 "../src/Cmm/SiteBundle/Resources/public/css/*.css"
                 "../src/Cmm/UserBundle/Resources/public/css/*.css"
                 output='css/style.css'
@@ -49,9 +49,11 @@
         {# BLOCK HEADER #}
         {% block header %}
                 <span id="header" class="row-fluid">
-                    <div>
+                    <span class="span8 offset2">
                         <a id="nomSite" href="{{ path('cmm_site_homepage') }}" title="Accueil - Chez Marie Madeleine">Chez Marie Madelaine</a>
-                    </div>
+                        <p>Crêperie Traditionnelle</p>
+                        <address>160 rue Saint-Martin - 75003 - +330612884698</address>
+                    </span>
                     
                 </span>
         {% endblock header %}

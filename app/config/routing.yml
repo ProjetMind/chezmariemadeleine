@@ -5,6 +5,9 @@ cmm_user:
 cmm_site:
     resource: "@CmmSiteBundle/Resources/config/routing.yml"
     prefix:   /
+    
+cmm_site_pages:
+    resource: "@CmmSiteBundle/Resources/config/pages.yml"
 
 # FOS User Bundle Routing
 fos_user_security:
