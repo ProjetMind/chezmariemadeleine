@@ -8,3 +8,28 @@ and open the template in the editor.
     Author     : nsi
 */
 
+/*
+Font pour le header
+*/
+@font-face{
+    font-family: "Site name font";
+    src: url("../Resources/webfontkit-contribute/contribute_free-version-webfont.ttf");
+    font-style: italic;
+}
+
+/*
+Header
+*/
+#header *{
+    color: #7b410d;
+}
+
+/*
+Nom du site
+*/
+#nomSite{
+    font-family: "Site name font";
+    font-style: italic;
+    font-size: 57px;
+    vertical-align: middle;
+}
