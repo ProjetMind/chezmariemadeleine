@@ -1,0 +1,40 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 20 mars 2014, 03:55:58
+    Author     : nsi
+*/
+
+
+
+
+#navHeader #ulNav li.element{
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+}
+
+/*
+Ul nav
+*/
+#ulNav{
+    margin: 0 auto;
+    width: 800px;
+    max-width: 800px;
+    position: relative;
+}
+
+#creperieSubMenuImg{
+   position: absolute;
+   z-index: 1;
+}
+
+#containerSubMenuUl{
+    z-index: 2;
+    position: absolute;
+    width: 130px;
+    margin-top: 50px;
+}

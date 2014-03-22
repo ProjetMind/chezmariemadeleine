@@ -17,6 +17,7 @@
         {% stylesheets 
                 filter='?lessphp, ?yui_css, cssrewrite'
                 "../web/css/style.css"
+                "../web/css/nav_header.css"
                 "../web/css/bootstrap.css"
                 "../src/Cmm/SiteBundle/Resources/public/css/*.css"
                 "../src/Cmm/UserBundle/Resources/public/css/*.css"
@@ -42,14 +43,13 @@
     </head>
     
     <body>  
-        
-        <div class="container-fluid row-fluid">
-    
+        <div class="container row-fluid">
             <span class="span8 offset2">
                 
-        {# BLOCK HEADER #}
-        {% block block_header %}
-                <span id="header" class="row-fluid">
+                
+                {# BLOCK HEADER #}
+                {% block block_header %}
+                <span id="header" class="row">
                     <span class="span8 offset2">
                         {% block site_name %}
                         <img alt="logo site" src="{{ asset('Resources/logo.png') }}" />
@@ -59,66 +59,74 @@
                         {% endblock site_name %}
                     </span>
                 </span>
-                
-                
-        {% endblock block_header %}
+                {% endblock block_header %}
         
-        {# BLOCK BODY #}
-        {% block body %}
-        
-                {### NAVIGATION ###}
-                {% block block_navigation %}
-                <span class="row-fluid">
-                    {% block nav %}
                 
-                    {% endblock nav %}
-                </span>
-                {% endblock block_navigation %}
-                {### FIN NAVIGATION ###}
-                
-                {### TITRE DE LA PAGE ###}
-                {% block block_title %}
-                <span class="row-fluid">
-                    <span class="span12">
-                        <h3 id="titlePage">
-                            {% block title_page %}
+                <span class="row">
+                    {# BLOCK BODY #}
+                    
+                    <span id="corpsSite" class="row"> 
+                        {% include '::nav_header.html.twig' %}
+                        <div class="row">
+                    {% block corps_site %}
+                    
+                        {### NAVIGATION ###}
+                        {% block block_navigation %}
+                        <span class="row">
+                            {% block nav %}
+                                navigation
+                            {% endblock nav %}
+                        </span>
+                        {% endblock block_navigation %}
+                        {### FIN NAVIGATION ###}
 
-                            {% endblock title_page %}
-                        </h3>
+                        {### TITRE DE LA PAGE ###}
+                        {% block block_title %}
+                        <span class="row">
+                            <span class="span12">
+                                <h3 id="titlePage">
+                                    {% block title_page %}
+                                        titre page
+                                    {% endblock title_page %}
+                                </h3>
+                            </span>
+                        </span>
+                        {% endblock block_title %}
+                        {### FIN TITRE DE LA PAGE ###}
+
+                        {### DESCRIPTION DE LA PAGE ###}
+                        {% block block_description %}
+                        <p id="descriptionPage" class="">
+                        {% block description_page %}
+                            desription page
+                        {% endblock description_page %}
+                        </p>
+                        {% endblock block_description %}
+                        {### FIN DESCRIPTION DE LA PAGE ###}
+
+                        {### CONTENU DE LA PAGE ###}
+                        {% block block_contenu %}
+                            {% block contenu_page %}
+                                contenu page
+                            {% endblock contenu_page %}
+                        {% endblock block_contenu %}
+                        {### FIN CONTENU DE LA PAGE ###}
+                    
+                
+                        {% endblock corps_site %}
+                        </div>
                     </span>
+                    
+                    {% block block_menu_droit %}
+        
+                    {% endblock block_menu_droit %}
                 </span>
-                {% endblock block_title %}
-                {### FIN TITRE DE LA PAGE ###}
                 
-                {### DESCRIPTION DE LA PAGE ###}
-                {% block block_description %}
-                <p id="descriptionPage" class="">
-                {% block description_page %}
-                
-                {% endblock description_page %}
-                </p>
-                {% endblock block_description %}
-                {### FIN DESCRIPTION DE LA PAGE ###}
-                
-                {### CONTENU DE LA PAGE ###}
-                {% block block_contenu %}
-                    {% block contenu_page %}
-                
-                    {% endblock contenu_page %}
-                {% endblock block_contenu %}
-                {### FIN CONTENU DE LA PAGE ###}
-                
-        {% endblock body %}
-        
         {# BLOCK MENU DROIT #}
-        {% block block_menu_droit %}
         
-        {% endblock block_menu_droit %}
+                
                 
             </span>
-            
         </div>
-        
     </body>
-       
 </html>

@@ -1,0 +1,65 @@
+{# empty Twig template #}
+
+<span id="navHeader" class="row">
+    
+    <ul id="ulNav">
+        
+        <li id="accueil" class="element">
+            <a href="#" title="Accueil">
+                <img class="noSubMenu" alt="Accueil" src="{{ asset('Resources/Menu/accueil.png') }}" />
+            </a>
+        </li>
+        
+        <li id="creperie" class="element" style="left: 110px">
+            <a href="#" title="La crêperie">
+                <img class="subMenu" alt="Creperie" src="{{ asset('Resources/Menu/creperie.png') }}" />
+            </a>
+            
+            <div class="containerSubMenu" style="display: none;">
+                <div id="creperieSubMenuImg" class="navMenuBg">
+                    <img src="{{ asset('Resources/Menu/creperie_open.png') }}"/>
+                </div>
+                <div id="containerSubMenuUl">
+                    <ul class="subUlNav">
+
+                        <li><a href="#" title="Présentation">Présentation</a></li>
+                        <li><a href="#" title="Le quartier">Le quartier</a></li>
+                        <li><a href="#" title="En ce moment">En ce moment</a></li>
+                    </ul>
+                </div>
+                
+                
+                
+            </div>
+        </li>
+        
+        <li id="produits" class="element" style="left: 250px">
+            <a href="#" title="Nos produits">
+                <img class="noSubMenu" alt="Produits" src="{{ asset('Resources/Menu/produits.png') }}" />
+            </a>
+        </li>
+        
+        <li id="carte" class="element" style="left: 415px">
+            <a href="#" title="La carte">
+                <img class="subMenu" alt="Carte" src="{{ asset('Resources/Menu/carte.png') }}" />
+            </a>
+            <ul class="hide subUlNav">
+                <li><a href="#" title="Nos crêpes et galettes">Nos crêpes et galettes</a></li>
+                <li><a href="#" title="Les formules">Les formules</a></li>
+            </ul>
+        </li>
+        
+        <li id="acces" class="element" style="left: 550px">
+            <a href="#" title="Accès">
+                <img class="noSubMenu" alt="Acces" src="{{ asset('Resources/Menu/acces.png') }}" />
+            </a>
+        </li>
+        
+        <li id="contact" class="element" style="left: 670px">
+            <a href="#" title="Contact">
+                <img class="noSubMenu" alt="Contact" src="{{ asset('Resources/Menu/contact.png') }}" />
+            </a>
+        </li>
+    </ul>
+    
+</span>

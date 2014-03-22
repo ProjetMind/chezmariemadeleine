@@ -14,7 +14,7 @@ class SiteController extends Controller
      */
     public function indexAction()
     {
-        $template           = '::accueil.html.twig';
+        $template           = '::base.html.twig';
         return $this->container->get('templating')->renderResponse($template);
     }
     
