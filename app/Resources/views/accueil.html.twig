@@ -1,5 +1,95 @@
 {% extends "::base.html.twig" %}
 
-{% block body %}
+{% block script_css %}
+{% endblock script_css %}
 
-{% endblock body %}
+{% block script_js %}
+<script type="text/javascript">
+     $(function() {
+$( "#tabs" ).tabs();
+});
+</script>                
+{% endblock script_js %}
+
+{% block corps_site %}
+
+    {% block tabs_onglet %}
+        <div id="tabs">
+            <ul>
+                <li class="liBorder"><a href="#tabs-1">La crêperie</a></li>
+                <li class="liBorder"><a href="#tabs-2">Nos crêpes et galettes</a></li>
+                <li class="liBorder"><a href="#tabs-3">Produits de saison</a></li>
+                <li class="lastLi"><a href="#tabs-4">Spécialités sans gluten</a></li>
+            </ul>
+            
+            <div id="tabs-1">
+                <p>Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam aliquet massa et lorem. Mauris dapibus lacus auctor risus. Aenean tempor ullamcorper leo. Vivamus sed magna quis ligula eleifend adipiscing. Duis orci. Aliquam sodales tortor vitae ipsum. Aliquam nulla. Duis aliquam molestie erat. Ut et mauris vel pede varius sollicitudin. Sed ut dolor nec orci tincidunt interdum. Phasellus ipsum. Nunc tristique tempus lectus.</p>
+            </div>
+        
+            <div id="tabs-2">
+                <p>Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed ligula in ligula suscipit aliquam. Praesent in eros vestibulum mi adipiscing adipiscing. Morbi facilisis. Curabitur ornare consequat nunc. Aenean vel metus. Ut posuere viverra nulla. Aliquam erat volutpat. Pellentesque convallis. Maecenas feugiat, tellus pellentesque pretium posuere, felis lorem euismod felis, eu ornare leo nisi vel felis. Mauris consectetur tortor et purus.</p>
+            </div>
+            
+            <div id="tabs-3">
+                <p>Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti. Aliquam vulputate, pede vel vehicula accumsan, mi neque rutrum erat, eu congue orci lorem eget lorem. Vestibulum non ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce sodales. Quisque eu urna vel enim commodo pellentesque. Praesent eu risus hendrerit ligula tempus pretium. Curabitur lorem enim, pretium nec, feugiat nec, luctus a, lacus.</p>
+                <p>Duis cursus. Maecenas ligula eros, blandit nec, pharetra at, semper at, magna. Nullam ac lacus. Nulla facilisi. Praesent viverra justo vitae neque. Praesent blandit adipiscing velit. Suspendisse potenti. Donec mattis, pede vel pharetra blandit, magna ligula faucibus eros, id euismod lacus dolor eget odio. Nam scelerisque. Donec non libero sed nulla mattis commodo. Ut sagittis. Donec nisi lectus, feugiat porttitor, tempor ac, tempor vitae, pede. Aenean vehicula velit eu tellus interdum rutrum. Maecenas commodo. Pellentesque nec elit. Fusce in lacus. Vivamus a libero vitae lectus hendrerit hendrerit.</p>
+            </div>
+            
+            <div id="tabs-4">
+                <p>kdfjvkdjf</p>
+            </div>
+            
+        </div>
+    {% endblock %}
+
+    <span class="row containerRectangle">
+        <span class="span12">
+            <h4 class="titleRectangle">EN CE MOMENT</h4>
+            <h5>Vive le printemps</h5>
+            <span class="row" style="margin:0">
+                <p class="textRectangle span7">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    Quisque pulvinar venenatis leo nec eleifend. Mauris mauris elit, laoreet id volutpat
+                    eu, scelerisque eget quam. Cras mauris est, placerat non diam ullamcorper,  a auctor
+                    tellus. Vivamus consectetur fringilla nisi. Phasellus justo arcu, pretium ut fermentum
+                    eu, ullamcorper 
+                </p>
+                <span class="span5">img</span>
+            </span>
+            <a title="Voir les recettes de printemps" href="#">Voir les recettes de printemps</a>
+        </span>
+    </span>
+
+    <span class="row containerRectangle">
+        <span class="span12">
+            <h4 class="titleRectangle">NOS PARTENAIRES</h4>
+            <h5>Rejoignez-nous</h5>
+            <span class="row" style="margin:0">
+                
+                <span class="span2">
+                    logo
+                </span>
+                <span class="span4">
+                    <p class="textRectangle">
+                        Lorem ipsum dolor sit amet, onsectetur adipiscing elit. 
+                    Quisque pulvinar venenatis uctor tellus. Vivamus consectetur 
+                    fringilla nisi. Phasellus justo arcu, pretium ut fermentum eu, 
+                    ullamcorper 
+                    </p>
+                </span>
+                
+                <span class="span2">
+                    logo
+                </span>
+                <span class="span4" style="padding-left: 0; ">
+                    Lorem ipsum dolor sit amet, onsectetur adipiscing elit. 
+                    Quisque pulvinar venenatis uctor tellus. Vivamus consectetur 
+                    fringilla nisi. Phasellus justo arcu, pretium ut fermentum eu, 
+                    ullamcorper 
+                </span>
+                
+            </span>
+        </span>
+    </span>
+
+{% endblock corps_site %}

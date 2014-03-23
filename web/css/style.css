@@ -17,6 +17,14 @@ Font pour le header
     font-style: italic;
 }
 
+@font-face{
+    font-family: "Font Champagne Limousines";
+    src: url('../Resources/webfontkit-champagne/champagne__limousines-webfont.ttf');
+}
+
+#tabs li a, span.containerRectangle *{
+    font-family: "Font Champagne Limousines";
+}
 /*
 Body
 */
@@ -71,4 +79,87 @@ box-shadow: 3px -3px 5px 1px #000000;
     -moz-box-shadow: 3px -3px 5px 1px #000000;
     position: relative;
     z-index: 3;
+    padding: 70px 20px;
+}
+
+/*
+UI-TABS sur l'accueil'
+*/
+
+#tabs{
+    background-color: #FFFFFF;
+    border: none;
+}
+#tabs *{
+    color: #FFFFFF;
+}
+
+#tabs div.ui-widget-content, #tabs li.ui-tabs-active{
+    background-color: #7b410d;
+    color: #FFFFFF;
+}
+
+#tabs li[aria-selected="false"]{
+    background-color: #5c2f07;
+}
+
+#tabs li{
+    margin: 0;
+    border-radius: 0;
+    border-top: 0;
+    border-left: 0;
+    border-bottom: 0;
+}
+#tabs li.lastLi{
+    border-right: 0;
+}
+#tabs li.liBorder{
+    border-right: 1px #3c1d01 solid;
+}
+
+#tabs li a{
+    font-size: 17px;
+    width: 90px;
+    text-align: center;
+    white-space: pre-line;
+}
+
+.ui-tabs .ui-tabs-nav{
+    padding: 0px;
+}
+
+#tabs div.ui-widget-content{
+    border-radius: 0;
+}
+
+/*
+Rectangle
+*/
+span.containerRectangle span.span12{
+    border: 1px solid #3c1d01;
+    padding: 6px;
+}
+
+span.containerRectangle h4.titleRectangle{
+    font-size: 25px;
+    color: #7b410d;
+}
+
+span.containerRectangle h5{
+    color: #f9842f;
+    font-size: 23px;
+}
+
+span.containerRectangle p{
+    color: #7b410d;
+    font-size: 16.2px;
+}
+
+span.containerRectangle a{
+    color: #f9842f;
+    font-size: 17px;
+}
+
+span.containerRectangle span.span4{
+    padding: 0;
 }
