@@ -45,7 +45,7 @@ $( "#tabs" ).tabs();
     <span class="row containerRectangle">
         <span class="span12">
             <h4 class="titleRectangle">EN CE MOMENT</h4>
-            <h5>Vive le printemps</h5>
+            <h5 class="subTitleRectangle">Vive le printemps</h5>
             <span class="row" style="margin:0">
                 <p class="textRectangle span7">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
@@ -63,7 +63,7 @@ $( "#tabs" ).tabs();
     <span class="row containerRectangle">
         <span class="span12">
             <h4 class="titleRectangle">NOS PARTENAIRES</h4>
-            <h5>Rejoignez-nous</h5>
+            <h5 class="subTitleRectangle">Rejoignez-nous</h5>
             <span class="row" style="margin:0">
                 
                 <span class="span2">
@@ -93,3 +93,27 @@ $( "#tabs" ).tabs();
     </span>
 
 {% endblock corps_site %}
+
+{% block contenu_menu_rectangle %}
+<div class="rectangleMenuDroit" id="nosCrepesRectangle">
+    <h4 class="titleRectangle">
+        <img alt="" src="{{ asset('Resources/Icons/menu_icon.png') }}" />
+        MENU CREPE
+    </h4>
+    <div id="nosCrepesMenuDroit">
+        <p style="font-weight: bold;">A composer soi-même</p>
+        <p>1 Galette <br/> + <br/>1 Crêpe</p>
+    </div>
+    <p id="prixNosCrepes" style="display: none;">8,50 (</p>
+</div>
+
+<div class="rectangleMenuDroit">
+    <h4 class="titleRectangle">
+        <img alt="" src="{{ asset('Resources/Icons/horaire_icon.png') }}" />
+    </h4>
+</div>
+
+<div class="rectangleMenuDroit">
+    premier rectangle
+</div>
+    {% endblock contenu_menu_rectangle %}

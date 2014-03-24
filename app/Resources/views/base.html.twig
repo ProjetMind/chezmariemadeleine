@@ -56,95 +56,96 @@
     </head>
     
     <body>  
-        <div class="container row-fluid">
-            <span class="span8 offset2">
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span2"></div>
+                <div class="span8">
                 
-                
-                {# BLOCK HEADER #}
-                {% block block_header %}
-                <span id="header" class="row">
-                    <span class="span8 offset2">
-                        {% block site_name %}
-                        <img alt="logo site" src="{{ asset('Resources/logo.png') }}" />
-                        <a id="nomSite" href="{{ path('cmm_site_homepage') }}" title="Accueil - Chez Marie Madeleine">Chez Marie Madelaine</a>
-                        <p>Crêperie Traditionnelle</p>
-                        <address>160 rue Saint-Martin - 75003 - +330612884698</address>
-                        {% endblock site_name %}
-                    </span>
-                </span>
-                {% endblock block_header %}
-        
-                
-                <span class="row">
-                    {# BLOCK BODY #}
-                    
-                    <span id="corpsSite" class="row"> 
-                        {% include '::nav_header.html.twig' %}
-                        <div class="row">
-                            <span class="span8">
-                    {% block corps_site %}
-                    
-                        {### NAVIGATION ###}
-                        {% block block_navigation %}
-                        <span class="row">
-                            {% block nav %}
-                                navigation
-                            {% endblock nav %}
-                        </span>
-                        {% endblock block_navigation %}
-                        {### FIN NAVIGATION ###}
-
-                        {### TITRE DE LA PAGE ###}
-                        {% block block_title %}
-                        <span class="row">
-                            <span class="span12">
-                                <h3 id="titlePage">
-                                    {% block title_page %}
-                                        titre page
-                                    {% endblock title_page %}
-                                </h3>
-                            </span>
-                        </span>
-                        {% endblock block_title %}
-                        {### FIN TITRE DE LA PAGE ###}
-
-                        {### DESCRIPTION DE LA PAGE ###}
-                        {% block block_description %}
-                        <p id="descriptionPage" class="">
-                        {% block description_page %}
-                            desription page
-                        {% endblock description_page %}
-                        </p>
-                        {% endblock block_description %}
-                        {### FIN DESCRIPTION DE LA PAGE ###}
-
-                        {### CONTENU DE LA PAGE ###}
-                        {% block block_contenu %}
-                            {% block contenu_page %}
-                                contenu page
-                            {% endblock contenu_page %}
-                        {% endblock block_contenu %}
-                        {### FIN CONTENU DE LA PAGE ###}
-                    
-                
-                        {% endblock corps_site %}
-                            </span>
-                            <span class="span4">
-                                {% block block_menu_droit %}
-                                    menu droit
-                                {% endblock block_menu_droit %}
-                            </span>
+                    {# BLOCK HEADER #}
+                    {% block block_header %}
+                    <div id="header" class="row-fluid">
+                        <div class="span12">
+                            {% block site_name %}
+                            <img alt="logo site" src="{{ asset('Resources/logo.png') }}" />
+                            <a id="nomSite" href="{{ path('cmm_site_homepage') }}" title="Accueil - Chez Marie Madeleine">Chez Marie Madelaine</a>
+                            <p>Crêperie Traditionnelle</p>
+                            <address>160 rue Saint-Martin - 75003 - +330612884698</address>
+                            {% endblock site_name %}
                         </div>
-                    </span>
-                    
-                    
-                </span>
-                
-        {# BLOCK MENU DROIT #}
+                    </div>
+                    {% endblock block_header %}
         
                 
-                
-            </span>
+                    <div id="containerBodyAndMenuHeader" class="row-fluid">
+                    
+                        {% include '::nav_header.html.twig' %}
+                        
+                        <div class="row-fluid" id="containerBodyLayout">
+                            <div class="span8">
+                            {% block corps_site %}
+
+                                {### NAVIGATION ###}
+                                {% block block_navigation %}
+                                <div class="row-fluid">
+                                    {% block nav %}
+                                        navigation
+                                    {% endblock nav %}
+                                </div>
+                                {% endblock block_navigation %}
+                                {### FIN NAVIGATION ###}
+
+                                {### TITRE DE LA PAGE ###}
+                                {% block block_title %}
+                                <div class="row-fluid">
+                                    <div class="span12">
+                                        <h3 id="titlePage">
+                                            {% block title_page %}
+                                                titre page
+                                            {% endblock title_page %}
+                                        </h3>
+                                    </div>
+                                </div>
+                                {% endblock block_title %}
+                                {### FIN TITRE DE LA PAGE ###}
+
+                                {### DESCRIPTION DE LA PAGE ###}
+                                {% block block_description %}
+                                <p id="descriptionPage" class="row-fluid">
+                                {% block description_page %}
+                                    desription page
+                                {% endblock description_page %}
+                                </p>
+                                {% endblock block_description %}
+                                {### FIN DESCRIPTION DE LA PAGE ###}
+
+                                {### CONTENU DE LA PAGE ###}
+                                {% block block_contenu %}
+                                    {% block contenu_page %}
+                                        contenu page
+                                    {% endblock contenu_page %}
+                                {% endblock block_contenu %}
+                                {### FIN CONTENU DE LA PAGE ###}
+
+
+                                {% endblock corps_site %}
+                            </div>
+                            <div class="span4" id="menuDroit">
+                                {% block block_menu_droit %}
+                                    
+                                    {% block contenu_menu_rectangle %}
+                                        {% include '::menu_droit.html.twig' %}
+                                    {% endblock contenu_menu_rectangle %}
+                                
+                                {% endblock block_menu_droit %}
+                            </div>
+                           
+                        </div>
+                        {% include '::footer.html.twig' %}
+                    </div>
+                </div>
+                <div class="span2"></div>
+                </div>
+            </div>
         </div>
     </body>
 </html>

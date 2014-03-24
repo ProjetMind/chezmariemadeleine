@@ -22,8 +22,12 @@ Font pour le header
     src: url('../Resources/webfontkit-champagne/champagne__limousines-webfont.ttf');
 }
 
-#tabs li a, span.containerRectangle *{
+#tabs li a, span.containerRectangle *, #footer *, #menuDroit *{
     font-family: "Font Champagne Limousines";
+}
+
+#containerBodyAndMenuHeader{
+    margin-bottom: 20px;
 }
 /*
 Body
@@ -32,13 +36,17 @@ body{
     background-image: url('../Resources/fond.png');
 }
 
+/*
+Header
+*/
+#header{
+    margin-bottom: 140px;
+}
+
 #header img{
     vertical-align: middle;
 }
 
-/*
-Header
-*/
 #header *{
     color: #7b410d;
     text-align: center;
@@ -59,27 +67,27 @@ Nom du site
 /*
 Corps Site
 */
-#corpsSite > div{
+div#containerBodyLayout{
     /*border:none 5px #000000;*/
     -moz-border-radius-topleft: 5px;
     -moz-border-radius-topright:5px;
-    -moz-border-radius-bottomleft:5px;
-    -moz-border-radius-bottomright:5px;
+    /*-moz-border-radius-bottomleft:5px;
+    -moz-border-radius-bottomright:5px;*/
     -webkit-border-top-left-radius:5px;
     -webkit-border-top-right-radius:5px;
-    -webkit-border-bottom-left-radius:5px;
-    -webkit-border-bottom-right-radius:5px;
+    /*-webkit-border-bottom-left-radius:5px;
+    -webkit-border-bottom-right-radius:5px;*/
     border-top-left-radius:5px;
     border-top-right-radius:5px;
-    border-bottom-left-radius:5px;
-    border-bottom-right-radius:5px;
+    /*border-bottom-left-radius:5px;
+    border-bottom-right-radius:5px;*/
     background-color: #FFFFFF;
     -webkit-box-shadow: 3px -3px 5px 1px #000000;
 box-shadow: 3px -3px 5px 1px #000000;
     -moz-box-shadow: 3px -3px 5px 1px #000000;
     position: relative;
     z-index: 3;
-    padding: 70px 20px;
+    padding: 10px;
 }
 
 /*
@@ -140,12 +148,12 @@ span.containerRectangle span.span12{
     padding: 6px;
 }
 
-span.containerRectangle h4.titleRectangle{
+.titleRectangle{
     font-size: 25px;
     color: #7b410d;
 }
 
-span.containerRectangle h5{
+.subTitleRectangle{
     color: #f9842f;
     font-size: 23px;
 }
@@ -163,3 +171,79 @@ span.containerRectangle a{
 span.containerRectangle span.span4{
     padding: 0;
 }
+
+/*
+Menu droit
+*/
+
+.rectangleMenuDroit{
+    padding: 10px;
+}
+
+#nosCrepesRectangle{
+    background-color: #f9842f;
+}
+
+#nosCrepesMenuDroit *{
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 16px;
+}
+
+#prixNosCrepes{
+    display: inline-block;
+    background-color: #614836;
+    -webkit-transform: rotate(41deg);
+    -moz-transform: rotate(41deg);
+    -o-transform: rotate(41deg);
+    writing-mode: lr-tb;
+}
+
+/*
+Footer
+*/
+#footer{
+    -moz-border-radius-bottomleft:5px;
+    -moz-border-radius-bottomright:5px;
+    -webkit-border-bottom-left-radius:5px;
+    -webkit-border-bottom-right-radius:5px;
+    border-bottom-left-radius:5px;
+    border-bottom-right-radius:5px;
+    background-color: #4b4b4b;
+    -webkit-box-shadow: 3px -3px 5px 1px #000000;
+    box-shadow: 3px -3px 5px 1px #000000;
+    -moz-box-shadow: 3px -3px 5px 1px #000000;
+    padding: 10px;
+}
+
+#footer *{
+    color: #FFFFFF;
+}
+
+#footer .titreFooter{
+    font-size: 17px;
+}
+
+#footer #footerCredit{
+    font-size: 13px;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+#footer .lvl1 p, #footer ul li{
+    font-size: 11.2px;
+}
+
+#footer ul{
+    margin: 0;
+}
+
+#footer li{
+    list-style: none;
+}
+
+#ulLienUtil{
+    text-decoration: underline;
+}
+
