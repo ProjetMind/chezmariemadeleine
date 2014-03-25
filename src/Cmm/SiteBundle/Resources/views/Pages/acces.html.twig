@@ -1,5 +1,85 @@
 {% extends "::base.html.twig" %}
 
 {% block nav %}
-    looool
+<ul class="navUlPage">
+    <li>
+        <a href="{{ path('cmm_site_homepage') }}" title="" class="navActiveLink">Accueil</a>
+    </li>
+    <li>></li>
+    <li>
+        <a href="{{ path('cmm_site_page_acces') }}" title="Accès" class="navNoActiveLink">Accès</a>
+    </li>
+</ul>
 {% endblock nav %}
+
+
+{% block title_page %}
+Accès
+{% endblock title_page %}
+
+
+{% block description_page %}
+Dans cette rubrique vous trouverez toutes les informations pour venir à la crêperie 
+en transport en commun ou en voiture.
+{% endblock description_page %}
+
+{% block contenu_page %}
+<ul class="">
+    <li class="pageUlContainer">
+        <h5 class="subTitleRectangle"> Chez Marie-Madeleine</h5>
+        <address>
+            160 rue Saint-Martin<br/>
+            75003 PARIS<br/>
+            Téléphone :  +33612884698
+        </address>
+    </li>
+    <li class="pageUlContainer divider-vertical"></li>
+    <li class="pageUlContainer">
+        <h5 class="subTitleRectangle"> Transports et Parkings</h5>
+        <ul id="ulListeTransport">
+            <li id="bus">
+                29 - 38 - 47
+            </li>
+            <li id="metros">
+                Rambuteau, Etienne Marcel, Chatelet-Les Halles
+            </li>
+            <li id="parking">
+                Beaubourg Horloge, Forum des halles, Saint-Martin
+            </li>
+            <li id="velib">
+                Station Vélib’ n° 3010
+            </li>
+        </ul>
+    </li>
+</ul>
+{% endblock contenu_page %}
+                                        
+
+{% block contenu_menu_rectangle %}
+<div class="rectangleMenuDroit">
+    <div class="floatMenuDroit">
+        <img alt="" src="{{ asset('Resources/Icons/horaire_icon.png') }}" />
+    </div>
+    <h4 class="titleRectangle">
+        HORAIRES
+    </h4>
+    <h5 class="subTitleRectangle">Service continu</h5>
+    <p>
+        LUN-JEU : 12h-20h<br/>
+        VEN-SAM : 12h 00h<br/>
+        Fermé le Dimanche
+    </p>
+</div>
+
+<div class="rectangleMenuDroit">
+    
+    <h4 class="titleRectangle">
+        MOYENS DE PAIEMENT
+    </h4>
+    <img alt="" src="{{ asset('Resources/Icons/moyen_paiement.png') }}" />
+    <h5 class="subTitleRectangle">Service continu</h5>
+    <p style="color: #f9842f; font-size: 16px;">
+        Attention la maison n’accepte pas la carte bleue.
+    </p>
+</div>
+{% endblock contenu_menu_rectangle %}

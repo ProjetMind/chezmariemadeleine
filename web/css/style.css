@@ -29,6 +29,11 @@ Font pour le header
 #containerBodyAndMenuHeader{
     margin-bottom: 20px;
 }
+
+address, #ulListeTransport li{
+    font-size: 16px;
+    color: #414141;
+}
 /*
 Body
 */
@@ -87,7 +92,7 @@ box-shadow: 3px -3px 5px 1px #000000;
     -moz-box-shadow: 3px -3px 5px 1px #000000;
     position: relative;
     z-index: 3;
-    padding: 10px;
+    padding: 10px 10px 10px 30px
 }
 
 /*
@@ -209,6 +214,73 @@ Menu droit
     -moz-transform: rotate(41deg);
     -o-transform: rotate(41deg);
     writing-mode: lr-tb;
+}
+
+/***
+PAGES
+***/
+
+/*
+Navigation
+*/
+
+#navPage ul.navUlPage{
+    margin: 0;
+}
+#navPage ul *{
+    display: inline-block;
+    list-style: none;
+    font-size: 12px;
+}
+
+.navActiveLink{
+    text-decoration: underline;
+    color: #f9842f;
+}
+
+.pageUlContainer{
+    list-style: none;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.pageUlContainer address{
+    margin-top: 5px;
+}
+
+/* 
+Icones 
+*/
+#bus{
+    list-style-image: url('../Resources/Icons/bus_icon.png');
+}
+
+#metros{
+    list-style-image: url('../Resources/Icons/metro_icon.png');
+}
+
+#parking{
+    list-style-image: url('../Resources/Icons/park_icon.png');
+}
+
+#velib{
+    list-style-image: url('../Resources/Icons/velib_icon.png');
+}
+
+
+
+/*
+Titre de page
+*/
+#titlePage{
+    color: #7b410d;
+    font-size: 32px;
+    text-decoration: underline;
+}
+
+#descriptionPage{
+    color: #7b410d;
+    font-size: 15px;
 }
 
 /*
