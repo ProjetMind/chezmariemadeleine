@@ -21,52 +21,53 @@ class SiteController extends Controller
     public function pagesAction(){
         
         $routeName          = $this->get('request')->get('_route');
-        $template           = '::accueil.html.twig';
+        $template           = 'CmmSiteBundle:Pages:%s.html.twig';
         
         // Créer un services qui gère le switch
         switch ($routeName){
             
             case 'cmm_site_page_creperie':
-                $template   = 'creperie';
+                $page   = 'creperie';
                 break;
             
             case "cmm_site_page_presentation":
-                $template   = 'presentation';
+                $page   = 'presentation';
                 break;
             
             case 'cmm_site_page_quartier':
-                $template   = 'quartier';
+                $page   = 'quartier';
                 break;
             
             case 'cmm_site_page_en_ce_moment':
-                $template   = 'moment';
+                $page   = 'moment';
                 break;
             
             case 'cmm_site_page_produits':
-                $template   = 'produits';
+                $page   = 'produits';
                 break;
             
             case 'cmm_site_page_carte':
-                $template   = 'carte';
+                $page   = 'carte';
                 break;
             
             case 'cmm_site_page_crepe_galette':
-                $template   = 'crepes_galettes';
+                $page   = 'crepes_galettes';
                 break;
             
             case 'cmm_site_page_formules':
-                $template   = 'formules';
+                $page   = 'formules';
                 break;
             
             case 'cmm_site_page_acces':
-                $template   = 'acces';
+                $page   = 'acces';
                 break;
             
             case 'cmm_site_page_contact':
-                $template   = 'conatact';
+                $page   = 'contact';
                 break;
         }
         
-        return $this->container->get('templating')->renderResponse($template);
+        $newTemplate = sprintf($template, $page);
+        return $this->container->get('templating')->renderResponse($newTemplate);
     }
 }

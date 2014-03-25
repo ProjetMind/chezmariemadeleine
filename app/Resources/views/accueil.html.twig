@@ -42,11 +42,11 @@ $( "#tabs" ).tabs();
         </div>
     {% endblock %}
 
-    <span class="row containerRectangle">
-        <span class="span12">
+    <div class="row-fluid containerRectangle">
+        <div class="span12">
             <h4 class="titleRectangle">EN CE MOMENT</h4>
             <h5 class="subTitleRectangle">Vive le printemps</h5>
-            <span class="row" style="margin:0">
+            <div class="row-fluid" style="margin:0">
                 <p class="textRectangle span7">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                     Quisque pulvinar venenatis leo nec eleifend. Mauris mauris elit, laoreet id volutpat
@@ -54,50 +54,52 @@ $( "#tabs" ).tabs();
                     tellus. Vivamus consectetur fringilla nisi. Phasellus justo arcu, pretium ut fermentum
                     eu, ullamcorper 
                 </p>
-                <span class="span5">img</span>
-            </span>
+                <div class="span5">img</div>
+            </div>
             <a title="Voir les recettes de printemps" href="#">Voir les recettes de printemps</a>
-        </span>
-    </span>
+        </div>
+    </div>
 
-    <span class="row containerRectangle">
-        <span class="span12">
+    <div class="row-fluid containerRectangle">
+        <div class="span12">
             <h4 class="titleRectangle">NOS PARTENAIRES</h4>
             <h5 class="subTitleRectangle">Rejoignez-nous</h5>
-            <span class="row" style="margin:0">
+            <div class="row" style="margin:0">
                 
-                <span class="span2">
+                <div class="span2">
                     logo
-                </span>
-                <span class="span4">
+                </div>
+                <div class="span4">
                     <p class="textRectangle">
                         Lorem ipsum dolor sit amet, onsectetur adipiscing elit. 
                     Quisque pulvinar venenatis uctor tellus. Vivamus consectetur 
                     fringilla nisi. Phasellus justo arcu, pretium ut fermentum eu, 
                     ullamcorper 
                     </p>
-                </span>
+                </div>
                 
-                <span class="span2">
+                <div class="span2">
                     logo
-                </span>
-                <span class="span4" style="padding-left: 0; ">
+                </div>
+                <div class="span4" style="padding-left: 0; ">
                     Lorem ipsum dolor sit amet, onsectetur adipiscing elit. 
                     Quisque pulvinar venenatis uctor tellus. Vivamus consectetur 
                     fringilla nisi. Phasellus justo arcu, pretium ut fermentum eu, 
                     ullamcorper 
-                </span>
+                </div>
                 
-            </span>
-        </span>
-    </span>
+            </div>
+        </div>
+    </div>
 
 {% endblock corps_site %}
 
 {% block contenu_menu_rectangle %}
 <div class="rectangleMenuDroit" id="nosCrepesRectangle">
-    <h4 class="titleRectangle">
+    <div class="floatMenuDroit">
         <img alt="" src="{{ asset('Resources/Icons/menu_icon.png') }}" />
+    </div>
+    <h4 class="titleRectangle">
         MENU CREPE
     </h4>
     <div id="nosCrepesMenuDroit">
@@ -108,12 +110,34 @@ $( "#tabs" ).tabs();
 </div>
 
 <div class="rectangleMenuDroit">
-    <h4 class="titleRectangle">
+    <div class="floatMenuDroit">
         <img alt="" src="{{ asset('Resources/Icons/horaire_icon.png') }}" />
+    </div>
+    <h4 class="titleRectangle">
+        HORAIRES
     </h4>
+    <h5 class="subTitleRectangle">Service continu</h5>
+    <p>
+        LUN-JEU : 12h-20h<br/>
+        VEN-SAM : 12h 00h<br/>
+        Fermé le Dimanche
+    </p>
 </div>
 
 <div class="rectangleMenuDroit">
-    premier rectangle
+    
+    <div class="floatMenuDroit">
+        <img alt="" src="{{ asset('Resources/Icons/acces_icon.png') }}" />
+    </div>
+    <h4 class="titleRectangle">
+        ACCES
+    </h4>
+    <h5 class="subTitleRectangle">Chez Marie-Madeleine</h5>
+    <address>
+        160 rue Saint-Martin<br/>
+        75003 PARIS</address>
+    <p style="text-align: right;">
+        <a href="#" title="Comment venir ?">Comment venir ?</a>
+    </p>
 </div>
     {% endblock contenu_menu_rectangle %}
