@@ -5,7 +5,7 @@
     <ul id="ulNav">
         
         <li id="accueil" class="element">
-            <a href="#" title="Accueil">
+            <a href="{{ path('cmm_site_homepage') }}" title="Accueil">
                 <img class="noSubMenu" alt="Accueil" src="{{ asset('Resources/Menu/accueil.png') }}" />
             </a>
         </li>
@@ -50,7 +50,7 @@
         </li>
         
         <li id="acces" class="element" style="left: 550px">
-            <a href="#" title="Accès">
+            <a href="{{ path('cmm_site_page_acces') }}" title="Accès">
                 <img class="noSubMenu" alt="Acces" src="{{ asset('Resources/Menu/acces.png') }}" />
             </a>
         </li>
