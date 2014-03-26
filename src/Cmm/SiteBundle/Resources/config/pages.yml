@@ -1,52 +1,41 @@
-cmm_site_page_creperie:
-    pattern:  /la-creperie
+#Creperie    
+cmm_site_page_creperie: 
+    pattern: /creperie
+    defaults: { _controller: CmmSiteBundle:Site:pages }  
+cmm_site_page_creperie_présentation:
+    pattern: /creperie/presentation
     defaults: { _controller: CmmSiteBundle:Site:pages }
-
-cmm_site_page_presentation:
-    pattern:  /présentation
-    defaults: { _controller: CmmSiteBundle:Site:pages }
-    prefix: /la-creperie
-
-cmm_site_page_quartier:
-    pattern:  /le-quartier
-    defaults: { _controller: CmmSiteBundle:Site:pages }
-    prefix: /la-creperie
-        
-cmm_site_page_en_ce_moment:
-    pattern:  /en-ce-moment
-    defaults: { _controller: CmmSiteBundle:Site:pages }
-    prefix: /la-creperie
+cmm_site_page_creperie_quartier:
+    pattern: /creperie/le-quartier
+    defaults: { _controller: CmmSiteBundle:Site:pages }  
+cmm_site_page_creperie_moment:
+    pattern: /creperie/en-ce-moment
+    defaults: { _controller: CmmSiteBundle:Site:pages }    
     
-    
-    
+#Nos produits
 cmm_site_page_produits:
-    pattern:  /nos-produits
+    pattern: /nos-produits
     defaults: { _controller: CmmSiteBundle:Site:pages }
-
-
-
+  
+#La carte
 cmm_site_page_carte:
-    pattern:  /la-carte
+    pattern: /la-carte
     defaults: { _controller: CmmSiteBundle:Site:pages }
-    
-cmm_site_page_crepe_galette:
-    pattern:  /crepes-et-galettes
-    defaults: { _controller: CmmSiteBundle:Site:pages }
-    prefix: /la-carte
-    
-cmm_site_page_formules:
-    pattern:  /formules
-    defaults: { _controller: CmmSiteBundle:Site:pages }
-    prefix: la-carte
+cmm_site_page_carte_crepes_galettes:
+    pattern: /la-carte/nos-crepes-et-galettes
+    defaults: { _controller: CmmSiteBundle:Site:pages }    
+cmm_site_page_carte_formules:
+    pattern: /la-carte/les-formules
+    defaults: { _controller: CmmSiteBundle:Site:pages }    
 
-    
+#Accès    
 cmm_site_page_acces:
-    pattern:  /acces
-    defaults: { _controller: CmmSiteBundle:Site:pages }
+    pattern: /acces
+    defaults: { _controller: CmmSiteBundle:Site:pages }    
 
-    
+#Contact
 cmm_site_page_contact:
-    pattern:  /contact
-    defaults: { _controller: CmmSiteBundle:Site:pages }
+    pattern: /contact
+    defaults: { _controller: CmmSiteBundle:Site:contact }
     
     

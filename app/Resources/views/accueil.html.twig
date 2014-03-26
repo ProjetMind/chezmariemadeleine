@@ -95,5 +95,7 @@ $( "#tabs" ).tabs();
 {% endblock corps_site %}
 
 {% block contenu_menu_rectangle %}
-{% include 'CmmSiteBundle:Menus:menu_1.html.twig' %}
-    {% endblock contenu_menu_rectangle %}
+{% include 'CmmSiteBundle:MenusDroit:menu_crepe.html.twig' %}
+{% include 'CmmSiteBundle:MenusDroit:horaire.html.twig' %}
+{% include 'CmmSiteBundle:MenusDroit:acces.html.twig' %}
+{% endblock contenu_menu_rectangle %}

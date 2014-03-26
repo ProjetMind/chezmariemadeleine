@@ -1,0 +1,37 @@
+{% extends "::base.html.twig" %}
+
+{% block nav %}
+<ul class="navUlPage">
+    <li>
+        <a href="{{ path('cmm_site_homepage') }}" title="" class="navActiveLink">Accueil</a>
+    </li>
+    <li>></li>
+    <li>
+        <a href="{{ path('cmm_site_page_contact') }}" title="Accès" class="navNoActiveLink">Contact</a>
+    </li>
+</ul>
+{% endblock nav %}
+
+
+{% block title_page %}
+Contact
+{% endblock title_page %}
+
+
+{% block description_page %}
+Dans cette rubrique vous trouverez toutes les informations pour venir à la crêperie 
+en transport en commun ou en voiture.
+{% endblock description_page %}
+
+{% block contenu_page %}
+<div class="row-fluid" id="containerFormContact">
+    {% include 'CmmSiteBundle:Forms:form_contact.html.twig' %}
+</div>
+{% endblock contenu_page %}
+                                        
+
+{% block contenu_menu_rectangle %}
+{% include 'CmmSiteBundle:MenusDroit:horaire.html.twig' %}
+{% include 'CmmSiteBundle:MenusDroit:acces.html.twig' %}
+{% include 'CmmSiteBundle:MenusDroit:partenaires.html.twig' %}
+{% endblock contenu_menu_rectangle %}

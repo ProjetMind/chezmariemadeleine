@@ -1,0 +1,46 @@
+
+
+<form  id="formContact" class="form-horizontal" action="#" method="post">
+
+    <div class="control-group">
+        {{ form_label(form.civilite) }}
+        <div class="controls">
+            {{ form_widget(form.civilite) }}
+        </div>
+    </div>
+    
+    <div class="control-group">
+        {{ form_label(form.nom) }}
+        <div class="controls">
+            {{ form_widget(form.nom) }}
+        </div>
+    </div>
+    
+    <div class="control-group">
+        {{ form_label(form.prenom) }}
+        <div class="controls">
+            {{ form_widget(form.prenom) }}
+        </div>
+    </div>
+    
+    <div class="control-group">
+        {{ form_label(form.email) }}
+        <div class="controls">
+            {{ form_widget(form.email) }}
+        </div>
+    </div>
+    
+    <div class="control-group">
+        {{ form_label(form.message) }}
+        <div class="controls">
+            {{ form_widget(form.message) }}
+        </div>
+    </div>
+    
+    <div class="control-group">
+        <div class="controls">
+            <input type="submit" value="Envoyer le message" class="input-xlarge" >
+        </div>
+    </div>
+    {{ form_widget(form._token) }}
+</form>

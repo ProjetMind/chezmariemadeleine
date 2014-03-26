@@ -3,6 +3,8 @@
 namespace Cmm\SiteBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Cmm\SiteBundle\Entity\Contact;
+use Cmm\SiteBundle\Form\Type\ContactType;
 
 class SiteController extends Controller
 {
@@ -62,12 +64,33 @@ class SiteController extends Controller
                 $page   = 'acces';
                 break;
             
-            case 'cmm_site_page_contact':
-                $page   = 'contact';
-                break;
         }
         
         $newTemplate = sprintf($template, $page);
         return $this->container->get('templating')->renderResponse($newTemplate);
+    }
+    
+    public function contactAction(){
+        
+        $contact        = new Contact();
+        $form           = $this->createForm(new ContactType(), $contact);
+        $request        = $this->container->get('request');
+        
+        if($request->getMethod() === "POST"){
+            
+            $form->submit($request);
+            
+            if($form->isValid()){
+                
+                //Envoi email 
+            }
+        }
+        
+        $template       = 'CmmSiteBundle:Pages:contact.html.twig';
+        return $this->container->get('templating')->renderResponse($template,
+                array(
+                            'form'      => $form->createView()
+                ));
+        
     }
 }

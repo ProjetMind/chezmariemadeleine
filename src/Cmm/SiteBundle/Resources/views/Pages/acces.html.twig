@@ -56,30 +56,6 @@ en transport en commun ou en voiture.
                                         
 
 {% block contenu_menu_rectangle %}
-<div class="rectangleMenuDroit">
-    <div class="floatMenuDroit">
-        <img alt="" src="{{ asset('Resources/Icons/horaire_icon.png') }}" />
-    </div>
-    <h4 class="titleRectangle">
-        HORAIRES
-    </h4>
-    <h5 class="subTitleRectangle">Service continu</h5>
-    <p>
-        LUN-JEU : 12h-20h<br/>
-        VEN-SAM : 12h 00h<br/>
-        Fermé le Dimanche
-    </p>
-</div>
-
-<div class="rectangleMenuDroit">
-    
-    <h4 class="titleRectangle">
-        MOYENS DE PAIEMENT
-    </h4>
-    <img alt="" src="{{ asset('Resources/Icons/moyen_paiement.png') }}" />
-    <h5 class="subTitleRectangle">Service continu</h5>
-    <p style="color: #f9842f; font-size: 16px;">
-        Attention la maison n’accepte pas la carte bleue.
-    </p>
-</div>
+{% include 'CmmSiteBundle:MenusDroit:horaire.html.twig' %}
+{% include 'CmmSiteBundle:MenusDroit:moyen_paiement.html.twig' %}
 {% endblock contenu_menu_rectangle %}
