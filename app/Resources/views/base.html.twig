@@ -83,66 +83,70 @@
                         {% include '::nav_header.html.twig' %}
                         
                         <div class="row-fluid" id="containerBodyLayout">
-                            <div class="span8">
-                            {% block corps_site %}
-
-                                {### NAVIGATION ###}
-                                {% block block_navigation %}
-                                <div id="navPage" class="row-fluid">
-                                    {% block nav %}
-                                        navigation
-                                    {% endblock nav %}
-                                </div>
-                                {% endblock block_navigation %}
-                                {### FIN NAVIGATION ###}
-
-                                {### TITRE DE LA PAGE ###}
-                                {% block block_title %}
-                                <div class="row-fluid">
-                                    <div class="">
-                                        <h3 id="titlePage">
-                                            {% block title_page %}
-                                                titre page
-                                            {% endblock title_page %}
-                                        </h3>
+                            
+                        {### NAVIGATION ###}
+                            {% block block_navigation %}
+                            <div id="navPage" class="row-fluid">
+                                {% block nav %}
+                                    navigation
+                                {% endblock nav %}
+                            </div>
+                            {% endblock block_navigation %}
+                            {### FIN NAVIGATION ###}
+                            
+                            <div class="row-fluid">
+                                <div class="span8">
+                                {% block corps_site %}
+                                    {### TITRE DE LA PAGE ###}
+                                    {% block block_title %}
+                                    <div class="row-fluid">
+                                        <div class="">
+                                            <h3 id="titlePage">
+                                                {% block title_page %}
+                                                    titre page
+                                                {% endblock title_page %}
+                                            </h3>
+                                        </div>
                                     </div>
+                                    {% endblock block_title %}
+                                    {### FIN TITRE DE LA PAGE ###}
+
+                                    {### DESCRIPTION DE LA PAGE ###}
+                                    {% block block_description %}
+                                    <div id="descriptionPage" class="row-fluid">
+                                    {% block description_page %}
+                                        desription page
+                                    {% endblock description_page %}
+                                    </div>
+                                    {% endblock block_description %}
+                                    {### FIN DESCRIPTION DE LA PAGE ###}
+
+                                    {### CONTENU DE LA PAGE ###}
+                                    {% block block_contenu %}
+                                    <div id="contenuPage">
+                                        {% block contenu_page %}
+                                            contenu page
+                                        {% endblock contenu_page %}
+                                    </div>
+                                    {% endblock block_contenu %}
+                                    {### FIN CONTENU DE LA PAGE ###}
+
+
+                                    {% endblock corps_site %}
                                 </div>
-                                {% endblock block_title %}
-                                {### FIN TITRE DE LA PAGE ###}
+                                <div class="span4" id="menuDroit">
+                                    {% block block_menu_droit %}
 
-                                {### DESCRIPTION DE LA PAGE ###}
-                                {% block block_description %}
-                                <div id="descriptionPage" class="row-fluid">
-                                {% block description_page %}
-                                    desription page
-                                {% endblock description_page %}
+                                        {% block contenu_menu_rectangle %}
+                                            {% include '::menu_droit.html.twig' %}
+                                        {% endblock contenu_menu_rectangle %}
+
+                                    {% endblock block_menu_droit %}
                                 </div>
-                                {% endblock block_description %}
-                                {### FIN DESCRIPTION DE LA PAGE ###}
-
-                                {### CONTENU DE LA PAGE ###}
-                                {% block block_contenu %}
-                                <div id="contenuPage">
-                                    {% block contenu_page %}
-                                        contenu page
-                                    {% endblock contenu_page %}
-                                </div>
-                                {% endblock block_contenu %}
-                                {### FIN CONTENU DE LA PAGE ###}
-
-
-                                {% endblock corps_site %}
+                                    
                             </div>
                             
-                            <div class="span4" id="menuDroit">
-                                {% block block_menu_droit %}
-                                    
-                                    {% block contenu_menu_rectangle %}
-                                        {% include '::menu_droit.html.twig' %}
-                                    {% endblock contenu_menu_rectangle %}
-                                
-                                {% endblock block_menu_droit %}
-                            </div>
+                            
                            
                         </div>
                         {% include '::footer.html.twig' %}

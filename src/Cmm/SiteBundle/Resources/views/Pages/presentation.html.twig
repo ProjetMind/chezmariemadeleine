@@ -1,1 +1,60 @@
-{# empty Twig template #}
+{% extends "::base.html.twig" %}
+
+{% block nav %}
+<ul class="navUlPage">
+    <li>
+        <a href="{{ path('cmm_site_homepage') }}" title="" class="navActiveLink">Accueil</a>
+    </li>
+    <li>></li>
+    <li>
+        <a href="{{ path('cmm_site_page_creperie_presentation') }}" title="La crêperie - Présentation" class="navNoActiveLink">
+            La crêperie - Présentation</a>
+    </li>
+</ul>
+{% endblock nav %}
+
+
+{% block title_page %}
+PRESENTATION
+{% endblock title_page %}
+
+
+{% block description_page %}
+<span class="cmm">Chez Marie-Madeleine</span>, c’est une crêperie comme on l’aime simple et conviviale où l’on mange comme 
+à la maison de délicieuses crêpes assorties de bons plats traditionnels.
+{% endblock description_page %}
+
+{% block contenu_page %}
+<div class="row-fluid">
+    <div class="span6">
+        <img alt="Chez Marie-Madeleine" src="{{ asset('Resources/exemple_photo02.png') }}" />
+    </div>
+    
+    <div class="span6">
+        <p>
+            Au coeur de Paris , située entre le quartier de l’Horloge, Beaubourg , Chatelet et le Marais , 
+            <span class="cmm">Chez Marie-Madeleine</span>, vous accueille chaleureusement depuis maintenant 
+            8 ans afin de satisfaire une petite pause gourmande, un déjeuner entre amis ou une petite soirée crêpe.
+        </p>
+    </div>
+</div>
+
+<div class="row-fluid">
+    <div class="span12">
+        <p>
+            Les crêpes et galettes sont faites à la demande selon la composition que vous choisissez! Laissez 
+            parler votre imagination car les combinaisons gourmandes sont infinies. <span class="cmm">Chez Marie Madeleine</span>, 
+            vous pourez prendre le soleil en été sur la terrasse tout  en dégustant une bonne crêpe 
+            accompagné de cidre BIO frais, ou vous rechauffer en hiver autour d’une bonne soupe faite maison. 
+            Venez découvrir tous les plats faits maison avec des bons légumes frais de saison!
+        </p>
+    </div>
+</div>
+{% endblock contenu_page %}
+                                        
+
+{% block contenu_menu_rectangle %}
+{% include 'CmmSiteBundle:MenusDroit:menu_crepe.html.twig' %}
+{% include 'CmmSiteBundle:MenusDroit:horaire.html.twig' %}
+{% include 'CmmSiteBundle:MenusDroit:acces.html.twig' %}
+{% endblock contenu_menu_rectangle %}

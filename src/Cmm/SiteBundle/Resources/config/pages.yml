@@ -1,15 +1,15 @@
 #Creperie    
 cmm_site_page_creperie: 
-    pattern: /creperie
+    pattern: /la-creperie
     defaults: { _controller: CmmSiteBundle:Site:pages }  
-cmm_site_page_creperie_présentation:
-    pattern: /creperie/presentation
+cmm_site_page_creperie_presentation:
+    pattern: /la-creperie/presentation
     defaults: { _controller: CmmSiteBundle:Site:pages }
 cmm_site_page_creperie_quartier:
-    pattern: /creperie/le-quartier
+    pattern: /la-creperie/le-quartier
     defaults: { _controller: CmmSiteBundle:Site:pages }  
 cmm_site_page_creperie_moment:
-    pattern: /creperie/en-ce-moment
+    pattern: /la-creperie/en-ce-moment
     defaults: { _controller: CmmSiteBundle:Site:pages }    
     
 #Nos produits
