@@ -281,6 +281,12 @@ Titre de page
 #descriptionPage{
     color: #7b410d;
     font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.cmm{
+    font-size: 15px;
+    color: #f9842f;
 }
 
 /*
@@ -311,6 +317,15 @@ Form contact
     border-top-right-radius:5px;
     border-bottom-left-radius:5px;
     border-bottom-right-radius:5px;
+}
+
+/*
+La carte
+*/
+.titleCarte{
+    font-size: 17px;
+    background-image: url('../Resources/tarifs_galettes_06.png');
+    background-repeat: no-repeat;
 }
 
 /*

@@ -52,7 +52,7 @@ class SiteController extends Controller
                 $page   = 'carte';
                 break;
             
-            case 'cmm_site_page_crepe_galette':
+            case 'cmm_site_page_carte_crepes_galettes':
                 $page   = 'crepes_galettes';
                 break;
             
