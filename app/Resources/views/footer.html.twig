@@ -5,19 +5,27 @@
     
         <span class="span3">
             <h4 class="titreFooter">Présentation</h4>
-            <p></p>
+            <div>
+                <img style="width: 100px; float: left; margin-right: 5px;" alt="" src="{{ asset('Resources/exemple_photo01.png') }}" class="img-polaroid" />
+                <p>
+                    <span class="cmm">Chez Marie-Madeleine</span>, c’est une crêperie comme on l’aime simple et conviviale où l’on mange comme 
+à la maison de délicieuses crêpes assorties de bons plats traditionnels.
+                </p>
+            </div>
+                
+            
         </span>
 
         <span class="span3">
             <h4 class="titreFooter">Rubriques</h4>
             <p>
             <ul id="ulRub">
-                <li><a href="#" title="Accueil">Accueil</a></li>
-                <li><a href="#" title="La crêperie">La crêperie</a></li>
-                <li><a href="#" title="La carte">La carte</a></li>
-                <li><a href="#" title="Nos produits">Nos produits</a></li>
-                <li><a href="#" title="Accès">Accès</a></li>
-                <li><a href="#" title="Contact"></a></li>
+                <li><a href="{{ path('cmm_site_homepage') }}" title="Accueil">Accueil</a></li>
+                <li><a href="{{ path('cmm_site_page_creperie') }}" title="La crêperie">La crêperie</a></li>
+                <li><a href="{{ path('cmm_site_page_carte') }}" title="La carte">La carte</a></li>
+                <li><a href="{{ path('cmm_site_page_produits') }}" title="Nos produits">Nos produits</a></li>
+                <li><a href="{{ path('cmm_site_page_acces') }}" title="Accès">Accès</a></li>
+                <li><a href="{{ path('cmm_site_page_contact') }}" title="Contact"></a></li>
             </ul>
             </p>
         </span>
