@@ -34,7 +34,7 @@ function mouseHoverSubMenu(){
                         $(this).children('a:first-child').css('display', 'none');
                         $(this).children('.containerSubMenu').css('display', '');
                     },
-                    duration: 1500,
+                    duration: 300,
                     step: function() {
                            $(this).css("overflow","visible");
                            $(this).children('a:first-child').css('display', 'none');
@@ -55,7 +55,7 @@ function mouseOutSubMenu(){
                    'height': '55px' 
                 },
                 {
-                    duration: 1500,
+                    duration: 300,
                     step: function(){
                         $(this).css("overflow", "visible");
                     },
