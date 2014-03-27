@@ -10,26 +10,22 @@
             </a>
         </li>
         
-        <li id="creperie" class="element" style="left: 110px">
+        <li id="creperie" class="element liSubMenu" style="left: 110px">
             <a href="#" title="La crêperie">
                 <img class="subMenu" alt="Creperie" src="{{ asset('Resources/Menu/creperie.png') }}" />
             </a>
             
             <div class="containerSubMenu" style="display: none;">
-                <div id="creperieSubMenuImg" class="navMenuBg">
-                    <img src="{{ asset('Resources/Menu/creperie_open.png') }}"/>
+                <div class="creperieSubMenuImg">
+                    <img src="{{ asset('Resources/Menu/creperie_open.png') }}" alt="" />
                 </div>
-                <div id="containerSubMenuUl">
+                <div class="containerSubMenuUl">
                     <ul class="subUlNav">
-
                         <li><a href="{{ path('cmm_site_page_creperie_presentation') }}" title="Présentation">Présentation</a></li>
                         <li><a href="#" title="Le quartier">Le quartier</a></li>
                         <li><a href="#" title="En ce moment">En ce moment</a></li>
                     </ul>
                 </div>
-                
-                
-                
             </div>
         </li>
         
@@ -39,14 +35,22 @@
             </a>
         </li>
         
-        <li id="carte" class="element" style="left: 415px">
+        <li id="carte" class="element liSubMenu" style="left: 415px">
             <a href="#" title="La carte">
                 <img class="subMenu" alt="Carte" src="{{ asset('Resources/Menu/carte.png') }}" />
             </a>
-            <ul class="hide subUlNav">
-                <li><a href="#" title="Nos crêpes et galettes">Nos crêpes et galettes</a></li>
-                <li><a href="#" title="Les formules">Les formules</a></li>
-            </ul>
+            
+            <div class="containerSubMenu" style="display: none">
+                <div class="creperieSubMenuImg">
+                    <img src="{{ asset('Resources/Menu/carte_open.png') }}" alt=""/>
+                </div>
+                <div class="containerSubMenuUl">
+                    <ul class="subUlNav">
+                        <li><a href="#" title="Nos crêpes et galettes">Nos crêpes et galettes</a></li>
+                        <li><a href="#" title="Les formules">Les formules</a></li>
+                    </ul>
+                </div>
+            </div>
         </li>
         
         <li id="acces" class="element" style="left: 550px">

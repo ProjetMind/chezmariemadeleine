@@ -15,6 +15,9 @@ and open the template in the editor.
     display: inline-block;
     position: absolute;
     bottom: 0;
+    height: 55px;
+    max-height: 131px;
+    overflow: visible;
 }
 
 /*
@@ -27,14 +30,25 @@ Ul nav
     position: relative;
 }
 
-#creperieSubMenuImg{
+.creperieSubMenuImg{
    position: absolute;
    z-index: 1;
 }
 
-#containerSubMenuUl{
+.containerSubMenuUl{
     z-index: 2;
     position: absolute;
     width: 130px;
     margin-top: 50px;
+}
+
+.subUlNav li a{
+    color: #FFFFFF;
+}
+
+.subUlNav li{
+    list-style-image: url('../Resources/Menu/triangle_creperie.png');
+}
+
+.subUlNav li:hover{
 }
