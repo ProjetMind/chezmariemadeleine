@@ -45,15 +45,11 @@ class SiteController extends Controller
                 $page   = 'produits';
                 break;
             
-            case 'cmm_site_page_carte':
-                $page   = 'carte';
-                break;
-            
             case 'cmm_site_page_carte_crepes_galettes':
                 $page   = 'crepes_galettes';
                 break;
             
-            case 'cmm_site_page_formules':
+            case 'cmm_site_page_carte_formules':
                 $page   = 'formules';
                 break;
             
