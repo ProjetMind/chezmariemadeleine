@@ -29,15 +29,11 @@ class SiteController extends Controller
         // Créer un services qui gère le switch
         switch ($routeName){
             
-            case 'cmm_site_page_creperie':
-                $page   = 'creperie';
-                break;
-            
             case "cmm_site_page_creperie_presentation":
                 $page   = 'presentation';
                 break;
             
-            case 'cmm_site_page_quartier':
+            case 'cmm_site_page_creperie_quartier':
                 $page   = 'quartier';
                 break;
             

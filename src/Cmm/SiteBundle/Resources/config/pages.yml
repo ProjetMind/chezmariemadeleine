@@ -1,7 +1,5 @@
 #Creperie    
-cmm_site_page_creperie: 
-    pattern: /la-creperie
-    defaults: { _controller: CmmSiteBundle:Site:pages }  
+ 
 cmm_site_page_creperie_presentation:
     pattern: /la-creperie/presentation
     defaults: { _controller: CmmSiteBundle:Site:pages }
@@ -18,9 +16,6 @@ cmm_site_page_produits:
     defaults: { _controller: CmmSiteBundle:Site:pages }
   
 #La carte
-cmm_site_page_carte:
-    pattern: /la-carte
-    defaults: { _controller: CmmSiteBundle:Site:pages }
 cmm_site_page_carte_crepes_galettes:
     pattern: /la-carte/nos-crepes-et-galettes
     defaults: { _controller: CmmSiteBundle:Site:pages }    
