@@ -33,7 +33,7 @@ class ContactType extends AbstractType
             ->add('nom', 'text',
                     array(
                             'label'     => 'Nom : *',
-                            'required'  => true,
+                            'required'  => false,
                             'label_attr'=> array(
                                 'class' => 'control-label'
                             ),
@@ -52,7 +52,7 @@ class ContactType extends AbstractType
                                 'class'    => 'input-xlarge'
                             )
                     ))
-            ->add('email', 'email',
+            ->add('email', 'text',
                     array(
                             'label'     => 'E-mail : *',
                             'required'  => true,

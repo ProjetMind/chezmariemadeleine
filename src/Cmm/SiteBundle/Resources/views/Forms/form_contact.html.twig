@@ -1,11 +1,18 @@
 
 
-<form  id="formContact" class="form-horizontal" action="#" method="post">
+    
+
+<form  id="formContact" class="form-horizontal" action="{{ path('cmm_site_page_contact') }}" method="post">
 
     <div class="control-group">
         {{ form_label(form.civilite) }}
         <div class="controls">
             {{ form_widget(form.civilite) }}
+            {% if errors.civilite is defined %}
+            <img name="erreur" alt="erreur" src="{{ asset('Resources/Icons/erreur.png') }}" />
+            {% elseif errors.civilite is not defined and isSubmit == true %}
+            <img name="check" alt="Champ correct" src="{{ asset('Resources/Icons/check.png') }}" />
+            {% endif %}
         </div>
     </div>
     
@@ -13,6 +20,11 @@
         {{ form_label(form.nom) }}
         <div class="controls">
             {{ form_widget(form.nom) }}
+            {% if errors.nom is defined %}
+            <img name="erreur" alt="erreur" src="{{ asset('Resources/Icons/erreur.png') }}" />
+            {% elseif errors.nom is not defined and isSubmit == true %}
+            <img name="check" alt="Champ correct" src="{{ asset('Resources/Icons/check.png') }}" />
+            {% endif %}
         </div>
     </div>
     
@@ -20,6 +32,11 @@
         {{ form_label(form.prenom) }}
         <div class="controls">
             {{ form_widget(form.prenom) }}
+            {% if errors.prenom is defined %}
+            <img name="erreur" alt="erreur" src="{{ asset('Resources/Icons/erreur.png') }}" />
+            {% elseif errors.prenom is not defined and isSubmit == true %}
+            <img name="check" alt="Champ correct" src="{{ asset('Resources/Icons/check.png') }}" />
+            {% endif %}
         </div>
     </div>
     
@@ -27,6 +44,11 @@
         {{ form_label(form.email) }}
         <div class="controls">
             {{ form_widget(form.email) }}
+            {% if errors.email is defined %}
+            <img name="erreur" alt="erreur" src="{{ asset('Resources/Icons/erreur.png') }}" />
+            {% elseif errors.email is not defined and isSubmit == true %}
+            <img name="check" alt="Champ correct" src="{{ asset('Resources/Icons/check.png') }}" />
+            {% endif %}
         </div>
     </div>
     
@@ -34,12 +56,17 @@
         {{ form_label(form.message) }}
         <div class="controls">
             {{ form_widget(form.message) }}
+            {% if errors.message is defined %}
+            <img name="erreur" alt="erreur" src="{{ asset('Resources/Icons/erreur.png') }}" />
+            {% elseif errors.message is not defined and isSubmit == true %}
+            <img name="check" alt="Champ correct" src="{{ asset('Resources/Icons/check.png') }}" />
+            {% endif %}
         </div>
     </div>
     
     <div class="control-group">
         <div class="controls">
-            <input type="submit" value="Envoyer le message" class="input-xlarge" >
+            <input name="valider" type="submit" value="Envoyer le message" class="input-xlarge" >
         </div>
     </div>
     {{ form_widget(form._token) }}

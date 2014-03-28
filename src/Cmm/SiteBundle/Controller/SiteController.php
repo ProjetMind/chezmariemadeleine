@@ -5,6 +5,7 @@ namespace Cmm\SiteBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Cmm\SiteBundle\Entity\Contact;
 use Cmm\SiteBundle\Form\Type\ContactType;
+use Symfony\Component\Validator\Validator;
 
 class SiteController extends Controller
 {
@@ -75,21 +76,35 @@ class SiteController extends Controller
         $contact        = new Contact();
         $form           = $this->createForm(new ContactType(), $contact);
         $request        = $this->container->get('request');
+        $isSubmit       = false;
+        $tabErrors      = array();
+        
         
         if($request->getMethod() === "POST"){
             
+            $isSubmit   = true;
             $form->submit($request);
+            $validateur = $this->get('validator');
+            $errors     = $validateur->validate($contact);
             
+            foreach ($errors as $error)
+            {
+                $tabErrors[$error->getPropertyPath()] = array(
+                    'elementId' => str_replace('data.', '', $error->getPropertyPath()),
+                    'errorMessage' => $error->getMessage(),
+                );
+            }
+            print_r($tabErrors);
             if($form->isValid()){
-                
                 //Envoi email 
             }
         }
-        
         $template       = 'CmmSiteBundle:Pages:contact.html.twig';
         return $this->container->get('templating')->renderResponse($template,
                 array(
-                            'form'      => $form->createView()
+                            'form'      => $form->createView(),
+                            'isSubmit'  => $isSubmit,
+                            'errors'    => $tabErrors
                 ));
         
     }

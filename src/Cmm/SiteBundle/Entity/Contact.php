@@ -26,6 +26,7 @@ class Contact
      * @var boolean
      *
      * @ORM\Column(name="civilite", type="boolean")
+     * @Assert\NotBlank(message="Le champ civilité est obligatoire.")
      */
     private $civilite;
 
@@ -33,6 +34,7 @@ class Contact
      * @var string
      *
      * @ORM\Column(name="nom", type="string", length=255)
+     * @Assert\NotBlank(message="Le champ nom est obligatoire.")
      */
     private $nom;
 
@@ -40,6 +42,7 @@ class Contact
      * @var string
      *
      * @ORM\Column(name="prenom", type="string", length=255)
+     * @Assert\NotBlank(message="Le champ prenom est obligatoire.")
      */
     private $prenom;
 
@@ -47,6 +50,10 @@ class Contact
      * @var string
      *
      * @ORM\Column(name="email", type="string", length=255)
+     * @Assert\Email(
+     *     message = "'{{ value }}' n'est pas un email valide.",
+     *     checkMX = true
+     * )
      * 
      */
     private $email;
@@ -55,6 +62,7 @@ class Contact
      * @var string
      *
      * @ORM\Column(name="message", type="string", length=255)
+     * @Assert\NotBlank(message="Le champ message est obligatoire.")
      */
     private $message;
 
