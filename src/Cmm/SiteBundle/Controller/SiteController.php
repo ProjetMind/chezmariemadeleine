@@ -37,7 +37,7 @@ class SiteController extends Controller
                 $page   = 'quartier';
                 break;
             
-            case 'cmm_site_page_en_ce_moment':
+            case 'cmm_site_page_creperie_moment':
                 $page   = 'moment';
                 break;
             

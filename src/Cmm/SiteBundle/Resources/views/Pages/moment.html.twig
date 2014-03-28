@@ -1,1 +1,35 @@
-{# empty Twig template #}
+{% extends "::base.html.twig" %}
+
+{% block nav %}
+<ul class="navUlPage">
+    <li>
+        <a href="{{ path('cmm_site_homepage') }}" title="" class="navActiveLink">Accueil</a>
+    </li>
+    <li>></li>
+    <li>
+        <a href="{{ path('cmm_site_page_creperie_moment') }}" title="La crêperie - En ce moment" class="navNoActiveLink">
+            La crêperie - En ce moment</a>
+    </li>
+</ul>
+{% endblock nav %}
+
+
+{% block title_page %}
+En ce moment
+{% endblock title_page %}
+
+
+{% block description_page %}
+
+{% endblock description_page %}
+
+{% block contenu_page %}
+<span class="alert alert-info">Cette page est actuellement en construction.</span>
+{% endblock contenu_page %}
+                                        
+
+{% block contenu_menu_rectangle %}
+{% include 'CmmSiteBundle:MenusDroit:menu_crepe.html.twig' %}
+{% include 'CmmSiteBundle:MenusDroit:horaire.html.twig' %}
+{% include 'CmmSiteBundle:MenusDroit:acces.html.twig' %}
+{% endblock contenu_menu_rectangle %}
