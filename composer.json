@@ -20,8 +20,6 @@
         "sensio/generator-bundle": "~2.3",
         "incenteev/composer-parameter-handler": "~2.0",
         "jquery/jquery":  "1.10.*",
-        "friendsofsymfony/user-bundle": "~2.0@dev",
-        "friendsofsymfony/jsrouting-bundle": "@stable",
         "leafo/lessphp": "0.4.0"
     },
     "scripts": {
