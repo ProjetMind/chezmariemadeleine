@@ -94,9 +94,31 @@ class SiteController extends Controller
                     'errorMessage' => $error->getMessage(),
                 );
             }
-            print_r($tabErrors);
+            
             if($form->isValid()){
-                //Envoi email 
+                
+                $from = function ($contact){
+                    if($contact->getCivilite() == 0){
+                        $civilite   = 'Mme';
+                    }else{
+                        $civilite   = 'Mr';
+                    }
+                    return $civilite." ".$contact->getNom()." ".$contact->getPrenom();
+                };
+                $message = \Swift_Message::newInstance();
+                $message->setSubject($contact->getObjet());
+                $message->setTo('shonen.shojo@gmail.com'); //Mettre l'adresse du client'
+                $message->setBody($contact->getMessage());
+                $message->setFrom($contact->getEmail(), $from($contact));
+                $this->get('mailer')->send($message);
+               
+                $messageConfirm = "Votre message a été envoyer. Vous recevrai une reponse très"
+                        . "prochainement.";
+                $this->get('session')->getFlashBag()->add('notice', $messageConfirm);
+                
+                $url = $this->generateUrl($this->get('request')->get('route'));
+                return $this->redirect($url);
+                
             }
         }
         $template       = 'CmmSiteBundle:Pages:contact.html.twig';

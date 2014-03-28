@@ -59,6 +59,13 @@ class Contact
     private $email;
 
     /**
+     * 
+     * @var string
+     * @Assert\NotBlank(message="Le champ objet est obligatoire.")
+     */
+    private $objet;
+    
+    /**
      * @var string
      *
      * @ORM\Column(name="message", type="string", length=255)
@@ -167,6 +174,29 @@ class Contact
     public function getEmail()
     {
         return $this->email;
+    }
+
+    /**
+     * 
+     * Set  objet
+     * 
+     * @param string $objet
+     * @return Contact
+     */
+    public function setObjet($objet){
+        $this->objet = $objet;
+        
+        return $this;
+    }
+    
+    /**
+     * 
+     * Get objet
+     * 
+     * @return string
+     */
+    public function getObjet(){
+        return $this->objet;
     }
 
     /**

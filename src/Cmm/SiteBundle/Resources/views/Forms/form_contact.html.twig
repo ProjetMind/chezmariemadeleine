@@ -53,6 +53,18 @@
     </div>
     
     <div class="control-group">
+        {{ form_label(form.objet) }}
+        <div class="controls">
+            {{ form_widget(form.objet) }}
+            {% if errors.objet is defined %}
+            <img name="erreur" alt="erreur" src="{{ asset('Resources/Icons/erreur.png') }}" />
+            {% elseif errors.objet is not defined and isSubmit == true %}
+            <img name="check" alt="Champ correct" src="{{ asset('Resources/Icons/check.png') }}" />
+            {% endif %}
+        </div>
+    </div>
+    
+    <div class="control-group">
         {{ form_label(form.message) }}
         <div class="controls">
             {{ form_widget(form.message) }}

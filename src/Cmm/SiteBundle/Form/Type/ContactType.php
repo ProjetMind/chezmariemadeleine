@@ -52,7 +52,7 @@ class ContactType extends AbstractType
                                 'class'    => 'input-xlarge'
                             )
                     ))
-            ->add('email', 'text',
+            ->add('email', 'email',
                     array(
                             'label'     => 'E-mail : *',
                             'required'  => true,
@@ -63,6 +63,17 @@ class ContactType extends AbstractType
                                 'class'    => 'input-xlarge'
                             )
                     ))
+            ->add('objet', 'text',
+                    array(
+                            'label'     => 'Objet : *',
+                            'required'  => true,
+                            'label_attr'=> array(
+                                'class' => 'control-label'
+                            ),
+                            'attr'      => array(
+                                'class'    => 'input-xlarge'
+                            )
+                    ))    
             ->add('message', 'textarea',
                     array(
                             'label'     => 'Votre message : *',

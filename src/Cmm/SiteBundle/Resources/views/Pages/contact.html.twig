@@ -10,6 +10,13 @@
         <a href="{{ path('cmm_site_page_contact') }}" title="Accès" class="navNoActiveLink">Contact</a>
     </li>
 </ul>
+
+{% for flashMessage in app.session.flashbag.get('notice') %}
+    <div class="alert-success" style="padding:10px; font-size:large;">
+        {{ flashMessage }}
+    </div>
+{% endfor %}
+
 {% endblock nav %}
 
 
