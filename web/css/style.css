@@ -99,38 +99,38 @@ box-shadow: 3px -3px 5px 1px #000000;
 UI-TABS sur l'accueil'
 */
 
-#tabs{
+#tabsAccueil{
     background-color: #FFFFFF;
     border: none;
 }
-#tabs *{
+#tabsAccueil *{
     color: #FFFFFF;
 }
 
-#tabs div.ui-widget-content, #tabs li.ui-tabs-active{
+#tabsAccueil div.ui-widget-content, #tabsAccueil li.ui-tabs-active{
     background-color: #7b410d;
     color: #FFFFFF;
 }
 
-#tabs li[aria-selected="false"]{
+#tabsAccueil li[aria-selected="false"]{
     background-color: #5c2f07;
 }
 
-#tabs li{
+#tabsAccueil li{
     margin: 0;
     border-radius: 0;
     border-top: 0;
     border-left: 0;
     border-bottom: 0;
 }
-#tabs li.lastLi{
+#tabsAccueil li.lastLi{
     border-right: 0;
 }
-#tabs li.liBorder{
+#tabsAccueil li.liBorder{
     border-right: 1px #3c1d01 solid;
 }
 
-#tabs li a{
+#tabsAccueil li a{
     font-size: 17px;
     width: 90px;
     text-align: center;
@@ -141,7 +141,7 @@ UI-TABS sur l'accueil'
     padding: 0px;
 }
 
-#tabs div.ui-widget-content{
+#tabsAccueil div.ui-widget-content{
     border-radius: 0;
 }
 

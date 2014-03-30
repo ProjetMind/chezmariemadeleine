@@ -1,20 +1,14 @@
 {% extends "::base.html.twig" %}
 
-{% block script_css %}
-{% endblock script_css %}
 
-{% block script_js %}
-<script type="text/javascript">
-     $(function() {
-$( "#tabs" ).tabs();
-});
-</script>                
-{% endblock script_js %}
+{% block block_navigation %}
+{% include '::slider.html.twig' %}
+{% endblock block_navigation %}
 
 {% block corps_site %}
 
     {% block tabs_onglet %}
-        <div id="tabs">
+        <div id="tabsAccueil">
             <ul>
                 <li class="liBorder"><a href="#tabs-1">La crêperie</a></li>
                 <li class="liBorder"><a href="#tabs-2">Nos crêpes et galettes</a></li>
@@ -93,6 +87,12 @@ $( "#tabs" ).tabs();
             </div>
         </div>
     </div>
+
+<script type="text/javascript">
+     $(function() {
+$("#tabsAccueil" ).tabs();
+});
+</script>        
 
 {% endblock corps_site %}
 

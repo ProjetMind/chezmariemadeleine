@@ -3,7 +3,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr">
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         
         {% block block_title_header %}        
             <title>
@@ -13,8 +13,7 @@
             
             <link rel="shortcut icon" href="{{ asset('favicon.ico')}}" type="image/x-icon" />    
         
-        {% block script_css %}
-        {% endblock script_css %}
+        
             
         {# CSS Resources #}    
         {% stylesheets 
@@ -23,13 +22,17 @@
                 "../web/css/nav_header.css"
                 "../web/css/bootstrap.css"
                 "../web/css/jquery-ui-1.10.4.css"
-            
+                "../web/css/skitter.styles.css" 
                 output='css/style.css'
         %}    
                 <link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
          {% endstylesheets %}    
-                
-         {# Javascript Resources #}       
+           
+         
+                        
+                        
+
+        {# Javascript Resources #}       
          {% javascripts 
                 filter='?yui_js'
                 "../vendor/jquery/jquery/jquery-1.10.2.js"
@@ -38,19 +41,12 @@
                 "../web/js/jquery-form.js"
                 "../web/js/form-contact.js"
                 "../web/js/nav_script.js"
-                "bundles/fosjsrouting/js/router.js"
-                "js/fos_js_routes.js"
+                "../web/js/jquery.easing.1.3.js"
+                "../web/js/jquery.skitter.min.js"
                 output='js/script_js.js'
             %}
                 <script type="text/javascript" src="{{ asset_url }}"></script>   
-         {% endjavascripts %}       
-           
-        
-                
-                
-         {% block script_js %}
-                
-        {% endblock script_js %}
+         {% endjavascripts %}  
                 
     </head>
     
@@ -92,7 +88,9 @@
                             
                             <div class="row-fluid">
                                 <div class="span8">
+                                    
                                 {% block corps_site %}
+                                    
                                     {### TITRE DE LA PAGE ###}
                                     {% block block_title %}
                                     <div class="row-fluid">

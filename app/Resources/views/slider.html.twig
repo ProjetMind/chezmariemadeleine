@@ -1,0 +1,34 @@
+
+<div class="box_skitter box_skitter_large row-fluid">
+	<ul>
+		<li>
+			<a href="#cut"><img src="{{ asset('images/001.jpg') }}" class="cut" /></a>
+			<div class="label_text"><p>cut</p></div>
+		</li>
+		<li>
+			<a href="#swapBlocks"><img src="{{ asset('images/002.jpg') }}" class="swapBlocks" /></a>
+			<div class="label_text"><p>swapBlocks</p></div>
+		</li>
+		<li>
+			<a href="#swapBarsBack"><img src="{{ asset('images/003.jpg') }}" class="swapBarsBack" /></a>
+			<div class="label_text"><p>swapBarsBack</p></div>
+		</li>
+	</ul>
+</div>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(".box_skitter_large").skitter
+                (
+                        {
+                            dots: true,
+                            preview: true,
+                            hideTools: true,
+                            navigation: false,
+                            labelAnimation: 'fixed',
+                            width_label: '400px',
+                            animation: 'directionLeft'
+                        }
+                );
+	});
+</script>

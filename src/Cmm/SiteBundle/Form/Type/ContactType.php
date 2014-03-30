@@ -33,7 +33,7 @@ class ContactType extends AbstractType
             ->add('nom', 'text',
                     array(
                             'label'     => 'Nom : *',
-                            'required'  => false,
+                            'required'  => true,
                             'label_attr'=> array(
                                 'class' => 'control-label'
                             ),
