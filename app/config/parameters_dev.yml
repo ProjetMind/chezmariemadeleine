@@ -1,0 +1,17 @@
+# This file is auto-generated during the composer install
+parameters:
+    database_driver: pdo_mysql
+    database_host: 127.0.0.1
+    database_port: '8889'
+    database_name: cmm
+    database_user: root
+    database_password: root
+    mailer_transport: smtp
+    mailer_host: ssl0.ovh.net
+    mailer_user: postmaster@chezmariemadeleine.com
+    mailer_password: 5CJb8xG3
+    mailer_auth_mode: login
+    mailer_port: 465
+    encryption: ssl
+    locale: fr
+    secret: 213aab4f7bf3416ca10d6852a6d528533

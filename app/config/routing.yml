@@ -1,7 +1,4 @@
-cmm_user:
-    resource: "@CmmUserBundle/Resources/config/routing.yml"
-    prefix:   /
-
+   
 cmm_site:
     resource: "@CmmSiteBundle/Resources/config/routing.yml"
     prefix:   /
@@ -9,3 +6,6 @@ cmm_site:
 cmm_site_pages:
     resource: "@CmmSiteBundle/Resources/config/pages.yml"
 
+_console:
+    resource: "@CoreSphereConsoleBundle/Resources/config/routing.yml"
+    prefix: /_console

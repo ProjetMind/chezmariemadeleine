@@ -1,7 +1,0 @@
-parameters:
-#    cmm_user.example.class: Cmm\UserBundle\Example
-
-services:
-#    cmm_user.example:
-#        class: %cmm_user.example.class%
-#        arguments: [@service_id, "plain_value", %parameter%]

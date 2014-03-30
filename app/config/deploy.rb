@@ -12,12 +12,19 @@ set :use_composer, true
 set :update_vendors, true
 set :dump_assetic_assets, false
  
-#set :repository,  "https://github.com/ProjetMind/midosphere.git"
-set :repository,  "/Users/nsi/Sites/chezmariemadeleine"
+set :repository,  "https://github.com/ProjetMind/chezmariemadeleine.git"
+#set :repository,  "/Users/nsi/Sites/chezmariemadeleine"
 set :scm,         :git
-set :deploy_via, :rsync_with_remote_cache
+set :deploy_via, :remote_cache
+#set :deploy_via, :rsync_with_remote_cache
 #set   :branch,        "prod"
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `subversion`, `mercurial`, `perforce`, or `none`
+
+# Use copy to bypass firewall...
+set :copy_strategy, :export
+set :copy_cache, "/tmp/#{application}"
+set :copy_exclude, [".git/*"]
+set :copy_compression, :gzip
 
 set :model_manager, "doctrine"
 # Or: `propel`
