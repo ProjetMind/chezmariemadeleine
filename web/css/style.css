@@ -22,6 +22,11 @@ Font pour le header
     src: url('../Resources/webfontkit-champagne/champagne__limousines-webfont.ttf');
 }
 
+@font-face{
+    font-family: 'Font carte';
+    src: url('../Resources/cursive_standard/Cursive_Standard.ttf');
+}
+
 *{
     font-family: "Font Champagne Limousines";
 }
@@ -322,11 +327,19 @@ Form contact
 /*
 La carte
 */
-.titleCarte{
+#containerCarte{
+    width: 500px;
+    margin: auto;
+    background-color: #2a1603;
+    color: #FFFFFF;
+    font-family: "Font carte";
     font-size: 17px;
-    background-image: url('../Resources/tarifs_galettes_06.png');
-    background-repeat: no-repeat;
 }
+
+.table caption{
+    font-weight: bold;
+}
+
 
 /*
 Footer

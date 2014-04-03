@@ -106,3 +106,4 @@ swiftmailer:
     password:  "%mailer_password%"
     encryption: "%encryption%"
     spool:     { type: memory }
+    
