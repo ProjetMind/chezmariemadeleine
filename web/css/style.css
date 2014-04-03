@@ -199,6 +199,9 @@ Menu droit
 
 #nosCrepesRectangle{
     background-color: #f9842f;
+    background-image: url('../Resources/Icons/prix.png');
+    background-repeat: no-repeat;
+    background-position: bottom left;
 }
 
 #nosCrepesMenuDroit *{
