@@ -339,16 +339,22 @@ La carte
     font-size: 17px;
 }
 
-.table{
+.contenuCarte{
     background-color: #2a1603;
     margin-left: 15px;
     margin-right: 15px;
     max-width: 500px;
     min-width: 471px;
-    margin: auto;
     -webkit-box-shadow: 3px -3px 5px 1px #000000;
     box-shadow: 3px -3px 5px 1px #000000;
     -moz-box-shadow: 3px -3px 5px 1px #000000;
+}
+
+.formule{
+    font-size: 30px;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .fontBarreGalette{
@@ -357,6 +363,18 @@ La carte
 
 .fontBarreCrepe{
     background-image: url('../Resources/Icons/barre_carte_crepe.png');
+}
+
+.fontBarreMenuCrepe{
+    background-image: url('../Resources/Icons/menu_crepe.png');
+}
+
+.fontBarrePlatJour{
+    background-image: url('../Resources/Icons/menu_plat_jour.png');
+}
+
+.fontBarreMenuComplet{
+    background-image: url('../Resources/Icons/menu_complet.png');
 }
 
 .fontElmt{
