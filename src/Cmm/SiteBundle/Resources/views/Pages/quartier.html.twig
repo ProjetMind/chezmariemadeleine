@@ -15,16 +15,46 @@
 
 
 {% block title_page %}
-Le quartier
+LE QUARTIER
 {% endblock title_page %}
 
 
 {% block description_page %}
-
+La crêperie <span class="cmm">Chez Marie-Madeleine</span> est située en plein coeur de Paris, 
+dans le 3ème arrondissemen de Paris.
 {% endblock description_page %}
 
 {% block contenu_page %}
-<span class="alert alert-info">Cette page est actuellement en construction.</span>
+<div class="row-fluid rectanglePage">
+    
+    <div class="span6">
+        <p>
+            La crêperie se trouve à quelques mètre à peine du Centre Beaubourg  ou centre Georges Pompidou. 
+            Ce centre, qui accueille plus de 5 millions de visiteurs par an est une blibliothèque, 
+            un musée d’ar contempirain et un cinéma.
+        </p>
+    </div>
+    
+    <div class="span6">
+        <img alt="Chez Marie-Madeleine" src="{{ asset('Resources/exemple_photo02.png') }}" />
+    </div>
+</div>
+
+<div class="row-fluid rectanglePage">
+    
+    <div class="span6">
+        <img alt="Chez Marie-Madeleine" src="{{ asset('Resources/exemple_photo01.png') }}" />
+    </div>
+    
+    <div class="span6">
+        <p>
+            <span class="cmm">Chez Marie Madeleine</span>, se trouve également à proximité du Marais et 
+            surtout du forum des Halles Venez nous voir à la crêperie pendant un après-midi shopping  aux 
+            Halles ou une journée culturelle au Centre Pompidou ! Nous vous accueillerons avec plaisir !
+        </p>
+    </div>
+    
+</div>
 {% endblock contenu_page %}
                                         
 

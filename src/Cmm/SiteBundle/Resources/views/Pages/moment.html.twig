@@ -15,16 +15,42 @@
 
 
 {% block title_page %}
-En ce moment
+EN CE MOMENT
 {% endblock title_page %}
 
 
 {% block description_page %}
-
+En ce moment <span class="cmm">Chez Marie-Madeleine</span> c’est le printemps!
 {% endblock description_page %}
 
 {% block contenu_page %}
-<span class="alert alert-info">Cette page est actuellement en construction.</span>
+<div class="row-fluid rectanglePage">
+    <div class="span6">
+        <img alt="Chez Marie-Madeleine" src="{{ asset('Resources/exemple_photo02.png') }}" />
+    </div>
+    
+    <div class="span6">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tempus arcu vitae dolor pharetra, 
+            sed fermentum massa convallis. Aenean porttitor aliquet pellentesque. Suspendisse ut neque ipsum. 
+            Ut viverra elementum rutrum. Quisque pretium nulla vitae congue tempor. Ut lacinia  
+        </p>
+    </div>
+</div>
+
+<div class="row-fluid rectanglePage">
+    <div class="span6">
+        <img alt="Chez Marie-Madeleine" src="{{ asset('Resources/exemple_photo02.png') }}" />
+    </div>
+    
+    <div class="span6">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tempus arcu vitae dolor pharetra, 
+            sed fermentum massa convallis. Aenean porttitor aliquet pellentesque. Suspendisse ut neque ipsum. 
+            Ut viverra elementum rutrum. Quisque pretium nulla vitae congue tempor. Ut lacinia  
+        </p>
+    </div>
+</div>
 {% endblock contenu_page %}
                                         
 

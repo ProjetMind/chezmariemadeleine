@@ -279,8 +279,6 @@ Icones
     list-style-image: url('../Resources/Icons/velib_icon.png');
 }
 
-
-
 /*
 Titre de page
 */
@@ -385,8 +383,6 @@ La carte
     height: 50px;
 }
 
-
-
 th, td{
     width: 100px;
 }
@@ -398,6 +394,13 @@ td{
 .info{
     color: #000000;
     padding-left: 5%;
+}
+
+/*
+Contenu Page
+*/
+.rectanglePage{
+    vertical-align: top;
 }
 
 /*
