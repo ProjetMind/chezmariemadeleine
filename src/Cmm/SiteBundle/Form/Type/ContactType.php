@@ -20,8 +20,8 @@ class ContactType extends AbstractType
                             'label'     => 'Civilité : *',
                             'required'  => true,
                             'choices'   => array(
-                                0   => 'Mme',
-                                1   => 'Mr',
+                                0   => '',
+                                1   => '',
                             ),
                             'multiple'  => false,
                             'expanded'  => true,

@@ -7,7 +7,17 @@
     <div class="control-group">
         {{ form_label(form.civilite) }}
         <div class="controls">
-            {{ form_widget(form.civilite) }}
+            
+            <label style="display: inline-block;" for="cmm_sitebundle_contact_civilite_0">
+                   Mme
+                   {{ form_widget(form.civilite[0]) }}
+            </label>
+            
+            <label style="display: inline-block;" for="cmm_sitebundle_contact_civilite_1">
+                   Mr.
+                   {{ form_widget(form.civilite[1]) }}
+             </label>
+               
             {% if errors.civilite is defined %}
             <img name="erreur" alt="erreur" src="{{ asset('Resources/Icons/erreur.png') }}" />
             {% elseif errors.civilite is not defined and isSubmit == true %}
