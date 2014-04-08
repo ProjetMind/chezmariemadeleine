@@ -214,6 +214,7 @@
 	-webkit-transition: all 0.2s;
 	-moz-transition: all 0.2s;
 	transition: all 0.2s;
+        border: 1px solid orange;
 }
 
 .box_skitter .info_slide_dots .image_number:hover {
