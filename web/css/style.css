@@ -48,7 +48,7 @@ address, #ulListeTransport li{
 Body
 */
 body{
-    background-image: url('../Resources/fond.png');
+    background: url('../Resources/fond.png') repeat-x, url('../Resources/fond2.png') repeat;
 }
 
 /*
@@ -228,6 +228,14 @@ Menu droit
     writing-mode: lr-tb;
 }
 
+.textRectangleMenuDroit{
+    font-size: 16px;
+}
+
+.iconMenuDroit{
+    margin-right: 5px;
+}
+
 /***
 PAGES
 ***/
@@ -285,7 +293,6 @@ Titre de page
 #titlePage{
     color: #7b410d;
     font-size: 32px;
-    text-decoration: underline;
 }
 
 #descriptionPage{
@@ -329,14 +336,31 @@ Form contact
     border-bottom-right-radius:5px;
 }
 
+#formContact input, #formContact textarea{
+    border-color: #582900;
+}
+
+#formContact .champErreur{
+    border-color: red;
+}
+
+#formContact input[type="submit"]{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #f8832e;
+}
+
 /*
 La carte
 */
+
+.containerCarte *{
+    font-family: "Font carte";
+}
 .containerCarte{
     width: 500px;
     margin: 20px auto;
     color: #FFFFFF;
-    font-family: "Font carte";
     font-size: 17px;
 }
 
@@ -352,7 +376,7 @@ La carte
 }
 
 .formule{
-    font-size: 30px;
+    font-size: 20px;
     text-align: center;
     padding-top: 20px;
     padding-bottom: 20px;

@@ -70,10 +70,11 @@ class SiteController extends Controller
         $request        = $this->container->get('request');
         $isSubmit       = false;
         $tabErrors      = array();
-        
+        $template       = 'CmmSiteBundle:Pages:contact.html.twig';
         
         if($request->getMethod() === "POST"){
             
+            $template       = 'CmmSiteBundle:Forms:form_contact.html.twig';
             $isSubmit   = true;
             $form->submit($request);
             $validateur = $this->get('validator');
@@ -113,7 +114,7 @@ class SiteController extends Controller
                 
             }
         }
-        $template       = 'CmmSiteBundle:Pages:contact.html.twig';
+        
         return $this->container->get('templating')->renderResponse($template,
                 array(
                             'form'      => $form->createView(),
