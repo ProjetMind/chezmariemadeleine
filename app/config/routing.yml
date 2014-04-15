@@ -5,6 +5,3 @@ cmm_site:
     
 cmm_site_pages:
     resource: "@CmmSiteBundle/Resources/config/pages.yml"
-
-fos_js_routing:
-    resource: "@FOSJsRoutingBundle/Resources/config/routing/routing.xml"
