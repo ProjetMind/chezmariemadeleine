@@ -100,10 +100,10 @@ doctrine:
 swiftmailer:
     transport: "%mailer_transport%"
     auth_mode: login
-    host:      "%mailer_host%"
-    port:      "%mailer_port%"
-    username:  "%mailer_user%"
-    password:  "%mailer_password%"
-    encryption: "%encryption%"
+    host:      ssl0.ovh.net
+    port:      465
+    username:  postmaster@chezmariemadeleine.com
+    password:  5CJb8xG3
+    encryption: ssl
     spool:     { type: memory }
     
